@@ -1,0 +1,191 @@
+// файл для подключения локальных шрифтов в стилях
+@font-face {
+  font-weight: 900;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  font-display: swap;
+  src: url("../fonts/proximanova_black.otf") format("opentype");
+}
+
+@font-face {
+  font-weight: 800;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  font-display: swap;
+  src: url("../proximanova_extrabold.otf") format("opentype");
+}
+
+@font-face {
+  font-weight: 700;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  font-display: swap;
+  src: url("../fonts/proximanova_bold.otf") format("opentype");
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  font-display: swap;
+  src: url("../fonts/proximanova_regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: "Proxima Nova";
+  font-display: swap;
+  src: url("../fonts/proximanova_light.otf") format("opentype");
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Proxima Nova", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden,
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip-path: inset(100%);
+}
+
+.page-content__wrapper {
+  width: 1220px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 1219px) {
+  .page-content__wrapper {
+    width: 768px;
+  }
+}
+
+@media (max-width: 767px) {
+  .page-content__wrapper {
+    width: 375px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+.text-content {
+  color: #373d40;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-content__section {
+  margin-bottom: 40px;
+}
+
+.text-content__title {
+  font-size: 30px;
+  line-height: 39px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.text-content__subtitle {
+  font-size: 24px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.text-content__paragraph {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.text-content__list {
+  margin: 0;
+  margin-bottom: 10px;
+  padding-left: 40px;
+}
+
+.text-content__list-item {
+  margin-bottom: 10px;
+
+}
+.text-content__list-item p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .text-content {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .text-content__section {
+    margin-bottom: 30px;
+  }
+
+  .text-content__title {
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .text-content__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .text-content__paragraph {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  .text-content__list {
+    margin-bottom: 10px;
+  }
+
+  .text-content__list-item {
+    margin-bottom: 10px;
+
+
+  }
+}
