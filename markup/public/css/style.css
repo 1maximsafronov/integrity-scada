@@ -106,6 +106,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
+/* стилизация текстового контента */
 .text-content {
   color: #373d40;
   font-size: 16px;
