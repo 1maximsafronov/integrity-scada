@@ -5,7 +5,7 @@ const copy = () => {
     .src([
       `src/*.ico`,
       `src/img/**/*.svg`,
-      `src/fonts/**/*.{woff,woff2}`,
+      `src/fonts/**/*.{woff,woff2,ttf,otf}`,
     ], {
       base: `src`,
     })
