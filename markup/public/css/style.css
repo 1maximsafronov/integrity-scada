@@ -1,4 +1,4 @@
-// файл для подключения локальных шрифтов в стилях
+/* файл для подключения локальных шрифтов в стилях */
 @font-face {
   font-weight: 900;
   font-style: normal;
@@ -189,4 +189,36 @@ input[type="radio"].visually-hidden {
 
 
   }
+
+
+}
+
+.page-header{
+  background-color: #1E2039;
+  width: 1920px;
+  height: 139px;
+}
+
+.page-header-nav{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.page-content{
+  background-image:url(../img/bg.png);
+}
+.page-footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+}
+
+.ul-footer{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
