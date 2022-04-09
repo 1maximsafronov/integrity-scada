@@ -193,21 +193,29 @@ input[type="radio"].visually-hidden {
 
 }
 
-.page-header{
-  background-color: #1E2039;
-  width: 1920px;
-  height: 139px;
-}
-
-.page-header-nav{
-  list-style: none;
+.page-header-top{
+  background: #ffff;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 10px;
+}
+.page-header-nav{
+  background: #1E2039 ;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  
+}
+.main-nav{
+  list-style: none;
 }
 
 .page-content{
   background-image:url(../img/bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;  
 }
 .page-footer{
   position: absolute;
