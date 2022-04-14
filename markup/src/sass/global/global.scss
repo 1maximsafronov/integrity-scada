@@ -1,10 +1,12 @@
 html {
   box-sizing: border-box;
+  min-height: 100vh;
 }
 
 body {
   font-family: "Proxima Nova", "Arial", "Helvetica", sans-serif;
   font-size: 16px;
+  min-height: 100vh;
 }
 
 *,

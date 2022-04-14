@@ -5,18 +5,29 @@
   }
 }
 
+@mixin media-mobile {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
 @mixin media-tablet {
-  @media (min-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     @content;
   }
 }
 
-@mixin media-desktop {
-  @media (min-width: $desktop-width) {
-    @content;
-  }
-}
+// @mixin media-tablet {
+//   @media (min-width: $tablet-width) {
+//     @content;
+//   }
+// }
 
+// @mixin media-desktop {
+//   @media (min-width: $desktop-width) {
+//     @content;
+//   }
+// }
 
 @mixin media-castom($width) {
   @media (min-width: $width) {
