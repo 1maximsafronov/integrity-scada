@@ -1,0 +1,144 @@
+.user-reuest {
+}
+
+.user-reuest__wrapper {
+  width: 1220px;
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.user-reuest__title {
+  font-size: 30px;
+  line-height: 37px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #004578;
+}
+
+.user-reuest__desc {
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+
+  color: #2e363e;
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.user-reuest__form {
+  margin: 0;
+  padding: 0;
+}
+
+.user-reuest__textbox {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.user-reuest__columns {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 30px;
+}
+
+.custom-textarea {
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.user-reuest__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-reuest__warning {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+  color: #004578;
+  margin: 0;
+}
+
+.user-reuest__warning-data {
+  color: #9b231f;
+  text-transform: uppercase;
+}
+
+.user-reuest__submit {
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+@include media-tablet {
+  .user-reuest__wrapper {
+    width: 768px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .user-reuest__title {
+    br {
+      display: none;
+    }
+  }
+}
+
+@include media-mobile {
+  .user-reuest__wrapper {
+    width: 375px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .user-reuest__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .user-reuest__desc {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .user-reuest__textbox {
+    margin-bottom: 20px;
+  }
+
+  .user-reuest__textarea {
+    margin-bottom: 20px;
+  }
+
+  .user-reuest__columns {
+    display: block;
+  }
+
+  .user-reuest__inner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-reuest__submit {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .user-reuest__warning {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+
+    br {
+      display: none;
+    }
+  }
+}

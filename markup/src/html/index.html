@@ -309,46 +309,65 @@
       <section class="user-reuest">
         <div class="user-reuest__wrapper">
           <h2 class="user-reuest__title">
-            Хотите получить доступ к онлайн-версии, бесплатному дистрибутиву для тестирования платформы
+            Хотите получить доступ к онлайн-версии, бесплатному
+            дистрибутиву для тестирования платформы<br>
             или задать вопрос?
           </h2>
           <p class="user-reuest__desc">
             Заполните форму и получите доступ к приложению.
           </p>
-          <form action="" class="user-reuest__form">
-            <p>
-              <label for=""></label>
-              <input type="text" name="" id="" placeholder="ФИО*">
+          <form id="request-form" action="" class="user-reuest__form">
+            <p class="user-reuest__textbox">
+              <label class="visually-hidden" for="request-form-user-name">Фамилия Имя Отчество</label>
+              <input class="custom-text-input" type="text" name="request-form-user-name" id="request-form-user-name"
+                placeholder="ФИО*" required>
             </p>
-            <p>
-              <label for=""></label>
-              <input type="text" name="" id="" placeholder="Компания*">
+            <div class="user-reuest__columns">
+              <p class="user-reuest__textbox">
+                <label class="visually-hidden" for="request-form-user-company">Компания</label>
+                <input class="custom-text-input" type="text" name="request-form-user-company"
+                  id="request-form-user-company" placeholder="Компания*" required>
+              </p>
+              <p class="user-reuest__textbox">
+                <label class="visually-hidden" for="request-form-user-goal">
+                  Цель запроса
+                </label>
+                <input class="custom-text-input" type="text" name="request-form-user-goal" id="request-form-user-goal"
+                  placeholder="Цель запроса*" required>
+              </p>
+              <p class="user-reuest__textbox">
+                <label class="visually-hidden" for="request-form-user-phone">
+                  Телефон
+                </label>
+                <input class="custom-text-input" type="text" name="request-form-user-phone" id="request-form-user-phone"
+                  placeholder="Телефон*" required>
+              </p>
+              <p class="user-reuest__textbox">
+                <label class="visually-hidden" for="request-form-user-email">
+                  Электронная почта
+                </label>
+                <input class="custom-text-input" type="text" name="request-form-user-email" id="request-form-user-email"
+                  placeholder="E-mail*" required>
+              </p>
+            </div>
+            <p class="user-reuest__textarea">
+              <label class="visually-hidden" for="request-form-user-message">
+                Сообщение
+              </label>
+              <textarea class="custom-textarea" name="request-form-user-message" id="request-form-user-message"
+                cols="30" rows="10" placeholder="Сообщение"></textarea>
             </p>
-            <p>
-              <label for=""></label>
-              <input type="text" name="" id="" placeholder="Телефон*">
-            </p>
-            <p>
-              <label for=""></label>
-              <input type="text" name="" id="" placeholder="Цель запроса*">
-            </p>
-            <p>
-              <label for=""></label>
-              <input type="text" name="" id="" placeholder="E-mail*">
-            </p>
-            <p>
-              <label for=""></label>
-              <textarea name="" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
-            </p>
-            <p class="user-reuest__warning">
-              Отправляя запрос, Вы даёте согласие на обработку
-              <span class="user-reuest__warning-data">
-                ПЕРСОНАЛЬНЫХ ДАННЫХ
-              </span>.
-            </p>
-            <button class="user-reuest__submit" type="submit">
-              Отправить запрос
-            </button>
+            <div class="user-reuest__inner">
+              <p class="user-reuest__warning">
+                Отправляя запрос, Вы даёте согласие на обработку<br>
+                <span class="user-reuest__warning-data">
+                  ПЕРСОНАЛЬНЫХ ДАННЫХ
+                </span>.
+              </p>
+              <button class="user-reuest__submit btn" type="submit">
+                Отправить запрос
+              </button>
+            </div>
           </form>
         </div>
       </section>
