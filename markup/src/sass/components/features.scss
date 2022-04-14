@@ -1,0 +1,133 @@
+.features {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.features__wrapper {
+  width: 1220px;
+  padding-top: 75px;
+  padding-bottom: 130px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features__title {
+  font-size: 48px;
+  margin: 0;
+  margin-bottom: 80px;
+  line-height: 133%;
+
+  text-align: center;
+
+  color: #004578;
+}
+
+.features__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.features__item {
+  width: 380px;
+}
+
+.features__icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  width: 120px;
+  height: 120px;
+  background-color: #004578;
+  border-radius: 50%;
+  padding: 20px;
+  fill: #ffffff;
+}
+
+.features__desc {
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  margin: 0;
+
+  color: #373d40;
+}
+
+@include media-tablet {
+  .features__wrapper {
+    width: 768px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .features__title {
+    font-size: 32px;
+    line-height: 133%;
+    margin-bottom: 40px;
+  }
+
+  .features__list {
+    justify-content: center;
+    row-gap: 50px;
+  }
+
+  .features__item {
+    width: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .features__icon {
+    flex-shrink: 0;
+    margin: 0;
+    width: 100px;
+    flex-grow: 0;
+    height: 100px;
+    padding: 16px;
+    margin-right: 20px;
+  }
+
+  .features__desc {
+    text-align: left;
+  }
+}
+
+@include media-mobile {
+  .features__wrapper {
+    width: 375px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .features__title {
+    font-size: 24px;
+    line-height: 133%;
+    margin-bottom: 30px;
+  }
+
+  .features__list {
+    row-gap: 20px;
+  }
+
+  .features__icon {
+    width: 60px;
+    height: 60px;
+    padding: 12px;
+    margin-right: 10px;
+  }
+
+  .features__desc {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
