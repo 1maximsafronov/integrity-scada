@@ -2,9 +2,9 @@ require(`dotenv`).config();
 const cors = require(`cors`);
 const path = require(`path`);
 const express = require(`express`);
-const sequelize = require('./db.js');
-const models = require("./models/models.js");
-const userRoute = require("./routes/user.js")
+const sequelize = require('./db');
+const models = require("./models/models");
+const apiRouter = require("./routes/api")
 const HTTP_PORT = 3000;
 
 const app = express();
@@ -23,9 +23,9 @@ const start = async () => {
   }
 }
 
-app.get(`/`, (req, res) => res.json({ message: `alive` }));
-app.use("/api", userRoute);
-app.use((req, res) => res.status(404));
+app.get("/", (req, res) => res.json({ message: `alive` }));
+app.use("/api", apiRouter);
+app.use((req, res) => res.sendStatus(404));
 
 
 start();

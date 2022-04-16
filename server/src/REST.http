@@ -2,6 +2,10 @@ GET http://localhost:3000/api/users
 
 ###
 
+GET http://localhost:3000/asdasdas
+
+###
+
 POST http://localhost:3000/api/registration
 Content-Type: application/json
 
