@@ -3,13 +3,13 @@ const cors = require(`cors`);
 const path = require(`path`);
 const express = require(`express`);
 const sequelize = require('./db.js');
-
+const models = require("./models/models.js");
+const userRoute = require("./routes/user.js")
 const HTTP_PORT = 3000;
 
 const app = express();
 app.use(cors());
 app.use(express.json());
-
 
 const start = async () => {
   try {
@@ -24,6 +24,7 @@ const start = async () => {
 }
 
 app.get(`/`, (req, res) => res.json({ message: `alive` }));
+app.use("/api", userRoute);
 app.use((req, res) => res.status(404));
 
 
