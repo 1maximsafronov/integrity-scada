@@ -17,13 +17,6 @@
     position: relative;
 
     &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 5px;
-      background-color: #ffffff;
       display: block;
     }
   }
@@ -39,6 +32,17 @@
   padding-bottom: 20px;
   color: #e3e3e4;
 
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 5px;
+    background-color: #ffffff;
+    display: none;
+  }
+
   &:hover,
   &:focus {
     background-color: rgba(52, 84, 122, 0.5);
@@ -48,5 +52,25 @@
 @include media-mobile {
   .main-nav {
     display: block;
+  }
+
+  .main-nav__item {
+  }
+
+  .main-nav__link {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: inset 0 1px 0 #34547a, inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+
+    &::after {
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: auto;
+      width: 5px;
+      height: auto;
+      position: absolute;
+    }
   }
 }
