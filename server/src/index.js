@@ -1,0 +1,31 @@
+require(`dotenv`).config();
+const cors = require(`cors`);
+const path = require(`path`);
+const express = require(`express`);
+const sequelize = require('./db');
+const models = require("./models/models");
+const apiRouter = require("./routes/api")
+const HTTP_PORT = 3000;
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+const start = async () => {
+  try {
+    await sequelize.authenticate();
+    await sequelize.sync();
+    app.listen(HTTP_PORT, () => {
+      console.log(`erver running at http://localhost:${HTTP_PORT}`);
+    });
+  } catch (error) {
+    console.error("Ошибка", error)
+  }
+}
+
+app.get("/", (req, res) => res.json({ message: `alive` }));
+app.use("/api", apiRouter);
+app.use((req, res) => res.sendStatus(404));
+
+
+start();
