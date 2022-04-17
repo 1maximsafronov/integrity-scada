@@ -8,3 +8,5 @@
 *.woff2 binary
 *.otf binary
 *.ttf binary
+*.db binary
+*.sqlite binary
