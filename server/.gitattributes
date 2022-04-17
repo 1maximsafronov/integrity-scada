@@ -8,3 +8,5 @@
 *.webp binary
 *.woff binary
 *.woff2 binary
+*.db binary
+*.sqlite binary
