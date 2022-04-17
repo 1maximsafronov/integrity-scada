@@ -1,4 +1,11 @@
 GET http://localhost:3000/api/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBzZXJ2ZXIuY29tIiwicGFzc3dvcmQiOiIyMTIzMmYyOTdhNTdhNWE3NDM4OTRhMGU0YTgwMWZjMyIsIm5hbWUiOiLQkNC00LzQuNC90LjRgdGC0YDQsNGC0L7RgCIsInBob25lIjpudWxsLCJjb21wYW55IjpudWxsLCJjaXR5IjpudWxsLCJyb2xlIjoiYWRtaW4iLCJyZWdfZGF0ZSI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyMi0wNC0xN1QxMDoyMDoxOC4zNDVaIiwidXBkYXRlZEF0IjoiMjAyMi0wNC0xN1QxMDoyMDoxOC4zNDVaIiwiaWF0IjoxNjUwMTkxMTAzLCJleHAiOjE2NTAyMzQzMDN9.DxCSzwcJz0ypClyrtI5UbpDQyLG1SNEyDb-hDPscWdA
+
+###
+
+GET http://localhost:3000/api/users
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYmFzaWMiLCJpZCI6MiwiY2l0eSI6ItCh0YLRgNCw0L3QsCDQt9Cw0LHQstC10L3QuNGPIiwibmFtZSI6ItCY0LLQsNC90L7QsiDQmNCy0LDQvSDQmNCy0LDQvdC-0LLQuNGHIiwicGhvbmUiOiIrNzgwMDU1NTM1MzUiLCJlbWFpbCI6InRlc3QzQG1haWwuY29tIiwiY29tcGFueSI6ItCd0JXQsdGL0LLQsNC70LrQsCIsInBhc3N3b3JkIjoiNWY0ZGNjM2I1YWE3NjVkNjFkODMyN2RlYjg4MmNmOTkiLCJyZWdfZGF0ZSI6IjIwMjItMDQtMTdUMTA6Mjc6MDQuOTkwWiIsInVwZGF0ZWRBdCI6IjIwMjItMDQtMTdUMTA6Mjc6MDQuOTkxWiIsImNyZWF0ZWRBdCI6IjIwMjItMDQtMTdUMTA6Mjc6MDQuOTkxWiIsImlhdCI6MTY1MDE5MTIyNSwiZXhwIjoxNjUwMjM0NDI1fQ.uMsR2QnD4nVOHzSeNFXZsygt68NgHwtsbM7eMWb7YV0
+
 
 ###
 
@@ -10,7 +17,7 @@ POST http://localhost:3000/api/registration
 Content-Type: application/json
 
 {
-  "email": "test1@mail.com",
+  "email": "test3@mail.com",
   "password": "password",
   "name": "Иванов Иван Иванович",
   "phone": "+78005553535",
@@ -31,6 +38,16 @@ Content-Type: application/json
 {
   "email": "test1@mail.com",
   "password": "password"
+}
+
+###
+
+POST http://localhost:3000/api/login
+Content-Type: application/json
+
+{
+  "email": "admin@server.com",
+  "password": "admin"
 }
 
 ###

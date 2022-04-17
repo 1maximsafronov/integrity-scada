@@ -9,9 +9,10 @@ const User = db.define("User", {
   phone: { type: DataTypes.STRING },
   company: { type: DataTypes.STRING },
   city: { type: DataTypes.STRING },
-  role: { type: DataTypes.STRING, defaultValue: "Basic" },
+  role: { type: DataTypes.STRING, defaultValue: "basic" },
   reg_date: { type: DataTypes.STRING },
 });
+
 
 const Order = {};
 

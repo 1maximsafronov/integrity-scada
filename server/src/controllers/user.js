@@ -4,6 +4,13 @@ const md5 = require("md5");
 const {generateToken, verifyToken} = require("../utils/token.js");
 const {getCleanUserDate} = require("../utils/common.js")
 
+const defaulAdmin = {
+      name: "Администратор",
+      email: "admin@server.com",
+      password: "admin",
+      role: "admin"
+    }
+
 class UserController {
   async checkAuth(req, res) {
     const token = req.headers["authorization"];
@@ -104,9 +111,16 @@ class UserController {
   async updateData(req, res) {}
 
   async getUsersData(req, res) {
+    const {user} = req;
+    if (user.role !== "admin") {
+      return res.status(401).json({error: "У вас нет прав доступа"});
+    }
+
     try {
       const users = await (await UserModel.findAll()).map(getCleanUserDate);
-    res.json({data: users});
+      res.json({
+        data: users,
+      });
     } catch (error) {
       res.status(500).json({error: "Ошибка при запросе списка пользователе"})
     }
@@ -120,6 +134,21 @@ class UserController {
       });
     } catch {
       res.status(400).json({error: "Пользователь не найден"});
+    }
+  }
+
+  async createAdmin(userData = defaulAdmin) {
+    const {name, email, password, role } = userData;
+
+    const candidate = await UserModel.findOne({ where: { email } });
+
+    if (!candidate) {
+      const newUser = await UserModel.create({
+        password: md5(password),
+        name,
+        email,
+        role
+      });
     }
   }
 }
