@@ -7,8 +7,7 @@ const plumber = require(`gulp-plumber`);
 const html = () => {
   return gulp
     .src(`src/html/*.html`)
-    .pipe(posthtml([include()]))
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    // .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(`build`));
 };
 
