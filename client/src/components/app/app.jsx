@@ -1,9 +1,22 @@
-// import {Router, Switch, Route} from "react-router-dom";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
 import React from "react";
+import MainPage from "../main-page/main-page";
+import LoginPage from "components/login-page/login-page";
 // привет
+
 const App = () => {
   return (
-    <h1>Пример мир</h1>
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <MainPage />
+        </Route>
+        <Route exact path="/login">
+          <LoginPage />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+
   );
 };
 
