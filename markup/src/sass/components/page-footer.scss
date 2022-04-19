@@ -4,8 +4,8 @@
 }
 
 .page-footer__wrapper {
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   padding-left: 20px;
   padding-right: 20px;
   margin-left: auto;
@@ -17,10 +17,10 @@
 
 .page-footer__title {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 16px;
+  line-height: 1.2;
 
   color: #ffffff;
 }
@@ -33,8 +33,8 @@
 
 .page-footer__nav-item {
   font-weight: 300;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 1.2;
   margin-bottom: 10px;
 
   &:last-child {
@@ -53,21 +53,21 @@
 
 .page-footer__copyright {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 1.2;
   text-align: center;
 
   color: rgba(255, 255, 255, 0.5);
   margin: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 .page-footer__contacts-item {
   color: #ffffff;
   margin: 0;
   font-weight: 300;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 18px;
   margin-bottom: 10px;
   display: block;
