@@ -66,11 +66,19 @@
         </div>
       </div>
     </header>
-    <main class="page-content">
+    <main class="page-content page-content--innerpage">
       <div class="page-content__wrapper">
-        <div class="side-menu">
+        <ul class="page-content__breadcrumbs breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link">Техническая поддержка</a>
+          </li>
+        </ul>
+        <div class="page-content__side-menu side-menu">
           <ul class="side-menu__list">
-            <li class="side-menu__item">
+            <li class="side-menu__item side-menu__item--active">
               <a href="support.html" class="side-menu__link">
                 Техническая поддержка
               </a>
@@ -82,7 +90,7 @@
             </li>
           </ul>
         </div>
-        <div class="text-content">
+        <div class="page-content__text-content text-content">
           <h1 class="text-content__title">
             Техническая поддержка
           </h1>
