@@ -1,6 +1,4 @@
 .page-content {
-  display: flex;
-
   &--innerpage {
     background-color: rgba(255, 255, 255, 0.75);
 
@@ -31,6 +29,7 @@
 
   &--not-found {
     background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
 
     .page-content__wrapper {
       padding-top: 40px;

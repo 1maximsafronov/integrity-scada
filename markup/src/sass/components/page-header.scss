@@ -3,17 +3,52 @@
   color: #ffffff;
 }
 
+.page-header__top {
+  width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page-header__top-wrapper {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 25px;
+  padding-right: 90px;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #ffffff;
-  width: 1030px;
+  width: 947px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.4));
+
+  position: relative;
+
+  &::before {
+    background-color: #ffffff;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2000px;
+    left: 100%;
+    transform: translateX(-100%);
+    right: 82px;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    top: 0;
+    bottom: 0;
+    width: 100px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    background-image: url("../img/whit-triangle.svg");
+    left: 100%;
+  }
 }
 
 .page-header__logo {
@@ -52,6 +87,9 @@
   background-color: #1e2039;
   display: flex;
   justify-content: space-between;
+  width: 1220px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .page-header__nav-top {
@@ -63,8 +101,20 @@
 }
 
 @include media-tablet {
+  .page-header__top {
+    width: 100%;
+  }
+
+  .page-header__nav-wrapper {
+    width: 100%;
+  }
+
   .page-header__top-wrapper {
     width: 100%;
+
+    &::after {
+      display: none;
+    }
   }
 }
 
@@ -84,7 +134,6 @@
   }
 
   .page-header__nav-wrapper {
-    width: 100%;
     display: block;
     position: absolute;
     z-index: 2;

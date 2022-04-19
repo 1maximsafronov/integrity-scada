@@ -9,6 +9,22 @@ body {
   font-size: 16px;
   min-height: 100vh;
   min-width: 375px;
+
+  overflow: overlay;
+
+  &::-webkit-scrollbar {
+    background: transparent;
+    width: 8px;
+    // background-image: url("../img/bg.png");
+    background-position: 100% 0;
+    background-color: #f2f3f4;
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #1e2039;
+  }
 }
 
 *,
@@ -25,3 +41,17 @@ img {
 a {
   text-decoration: none;
 }
+
+// .white-triangle {
+//   background-repeat: no-repeat;
+//   background-image: url("../img/whit-triangle.svg");
+//   background-position: 100% 0;
+//   background-size: auto 100%;
+//   position: absolute;
+//   width: 900px;
+//   height: 794px;
+//   z-index: 10;
+//   left: 463px;
+//   top: 0;
+//   filter: drop-shadow(0 0 1px rgba(#ff0000, 0.8));
+// }
