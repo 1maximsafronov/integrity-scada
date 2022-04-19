@@ -56,9 +56,19 @@
   margin-right: auto;
 }
 
+.page-content__registration-form {
+  width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media (max-width: 1219px) {
   .page-content__wrapper {
     width: 768px;
+  }
+
+  .page-content__registration-form {
+    width: 100%;
   }
 }
 

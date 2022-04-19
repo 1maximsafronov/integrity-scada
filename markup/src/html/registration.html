@@ -67,8 +67,70 @@
       </div>
     </header>
 
-    <main class="page-content">
-      <h1>Регистрация</h1>
+    <main class="page-content page-content--login-page">
+      <div class="page-content__wrapper">
+        <form class="page-content__registration-form registration-form" id="registration-form" action="">
+          <h1 class="registration-form__title">Регистрация</h1>
+          <div class="registration-form__wrapper">
+            <p class="registration-form__text-box">
+              <label class="visually-hidden" for="registration-form-email">
+                Введите email
+              </label>
+              <input class="custom-text-input" type="email" name="registration-form-email" id="registration-form-email"
+                placeholder="example@mail.ru">
+            </p>
+            <p class="registration-form__text-box">
+              <label class="visually-hidden" for="registration-form-user-name">
+                Введите Имя
+              </label>
+              <input class="custom-text-input" type="text" name="registration-form--user-name"
+                id="registration-form-user-name" placeholder="ФИО">
+            </p>
+            <p class="registration-form__text-box">
+              <label class="visually-hidden" for="registration-form-password">
+                Введите Пароль
+              </label>
+              <input class="custom-text-input" type="password" name="registration-form-password"
+                id="registration-form-password" placeholder="Пароль">
+            </p>
+            <p class="registration-form__text-box">
+              <label class="visually-hidden" for="registration-form-company">
+                Введите Название компании
+              </label>
+              <input class="custom-text-input" type="text" name="registration-form-company"
+                id="registration-form-company" placeholder="Компания">
+            </p>
+            <p class="registration-form__text-box">
+              <label class="visually-hidden" for="registration-form-repeat-password">
+                Введите Пароль повторно
+              </label>
+              <input class="custom-text-input" type="password" name="registration-form-repeat-password"
+                id="registration-form-repeat-password" placeholder="Повторите пароль">
+            </p>
+            <p class="registration-form__text-box">
+              <label class="visually-hidden" for="registration-form-phone">
+                Введите Название компании
+              </label>
+              <input class="custom-text-input" type="tel" name="registration-form-phone" id="registration-form-phone"
+                placeholder="Компания">
+            </p>
+          </div>
+
+          <div class="registration-form__bot-wrapper">
+            <p class="registration-form__warning user-reuest__warning">
+              Отправляя запрос, Вы даёте согласие на обработку<br>
+              <span class="registration-form__warning-data user-reuest__warning-data">
+                ПЕРСОНАЛЬНЫХ ДАННЫХ
+              </span>.
+            </p>
+            <button class="btn registration-form__submit-btn" type="submit">
+              Зарегистрироваться
+            </button>
+          </div>
+
+        </form>
+
+      </div>
     </main>
 
     <footer class="page-footer">

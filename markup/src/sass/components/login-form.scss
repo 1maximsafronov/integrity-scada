@@ -69,3 +69,11 @@ input:checked + .login-form__checkbox {
     background-image: url("../img/icon-check.png");
   }
 }
+
+@include media-tablet {
+  .login-form__title {
+    font-size: 36px;
+    line-height: 44px;
+    margin-bottom: 40px;
+  }
+}
