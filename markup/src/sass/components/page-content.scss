@@ -1,4 +1,6 @@
 .page-content {
+  display: flex;
+
   &--innerpage {
     background-color: rgba(255, 255, 255, 0.75);
 
@@ -24,6 +26,18 @@
     .page-content__wrapper {
       padding-top: 70px;
       padding-bottom: 70px;
+    }
+  }
+
+  &--not-found {
+    background-color: rgba(255, 255, 255, 0.75);
+
+    .page-content__wrapper {
+      padding-top: 40px;
+      padding-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
@@ -59,6 +73,11 @@
 
 .page-content__registration-form {
   width: 730px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-content__not-found {
   margin-left: auto;
   margin-right: auto;
 }

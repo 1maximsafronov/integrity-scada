@@ -1,0 +1,30 @@
+.not-found {
+  color: #34547a;
+}
+
+.not-found__code {
+  font-weight: 700;
+  font-size: 128px;
+  line-height: 156px;
+  text-align: center;
+  margin: 0;
+}
+
+.not-found__title {
+  font-size: 40px;
+  line-height: 49px;
+  margin: 0;
+  text-align: center;
+}
+
+@include media-mobile {
+  .not-found__code {
+    font-size: 96px;
+    line-height: 117px;
+  }
+
+  .not-found__title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
