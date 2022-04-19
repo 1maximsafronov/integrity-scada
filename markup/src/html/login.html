@@ -67,8 +67,33 @@
       </div>
     </header>
 
-    <main class="page-content">
-      <h1>Авторизация</h1>
+    <main class="page-content page-content--login-page">
+      <div class="page-content__wrapper">
+        <form class="page-content__login-form login-form" id="login-form" action="">
+          <h1 class="login-form__title">Авторизация</h1>
+          <p class="login-form__text-box">
+            <label class="visually-hidden" for="login-form-email">Введите email</label>
+            <input class="custom-text-input" type="email" name="login-form-email" id="login-form-email"
+              placeholder="example@mail.ru">
+          </p>
+          <p class="login-form__text-box">
+            <label class="visually-hidden" for="login-form-password">Введите email</label>
+            <input class="custom-text-input" type="password" name="login-form-password" id="login-form-password"
+              placeholder="********">
+          </p>
+          <div class="login-form__bot-wrapper">
+            <p class="login-form__remember">
+              <input class="visually-hidden" type="checkbox" name="login-form-rememer" id="login-form-rememer">
+              <label class="login-form__checkbox" for="login-form-rememer">Запомнить меня</label>
+            </p>
+            <button class="btn login-form__submit-btn" type="submit">
+              Войти
+            </button>
+          </div>
+
+        </form>
+
+      </div>
     </main>
 
     <footer class="page-footer">
