@@ -7,7 +7,8 @@
       padding-bottom: 80px;
       display: grid;
       grid-template-rows: min-content min-content;
-      grid-template-columns: 300px 830px;
+      grid-template-columns: 300px auto;
+      column-gap: 50px;
       justify-content: space-between;
       grid-template-areas:
         "breadcrumbs breadcrumbs"
@@ -63,6 +64,14 @@
 }
 
 @media (max-width: 1219px) {
+  .page-content {
+    &--innerpage {
+      .page-content__wrapper {
+        display: block;
+      }
+    }
+  }
+
   .page-content__wrapper {
     width: 768px;
   }
@@ -70,9 +79,21 @@
   .page-content__registration-form {
     width: 100%;
   }
+
+  .page-content__side-menu {
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 767px) {
+  .page-content--innerpage {
+    .page-content__wrapper {
+      display: block;
+      padding-top: 20px;
+      padding-bottom: 40px;
+    }
+  }
+
   .page-content__wrapper {
     width: 375px;
     padding-left: 30px;
@@ -81,5 +102,9 @@
 
   .page-content__login-form {
     width: 100%;
+  }
+
+  .page-content__breadcrumbs {
+    margin-bottom: 25px;
   }
 }

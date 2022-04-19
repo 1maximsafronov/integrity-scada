@@ -2,14 +2,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.side-menu__item {
-  margin-bottom: 15px;
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: #34547a;
+}
+
+.side-menu__item {
+  margin-bottom: 15px;
 
   &:last-child {
     margin-bottom: 0;
@@ -39,5 +39,21 @@
   &:hover,
   &:focus {
     border-color: #34547a;
+  }
+}
+
+@include media-tablet {
+  .side-menu__list {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .side-menu__item {
+    margin-bottom: 10px;
+  }
+
+  .side-menu__link {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
