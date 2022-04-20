@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
+
 const MainPage = function () {
   return (
     <div className="page">
@@ -51,9 +52,44 @@ const MainPage = function () {
                 </Link>
               </div>
               <div className="user-nav__item">
-                <a href="#" className="user-nav__link user-nav__link--registration">
+                <Link to="/registration" className="user-nav__link user-nav__link--registration">
                 Регистрация
-                </a>
+                </Link>
+              </div>
+              <div className="user-nav__item">
+                <Link to="/EntegrityPage" className="user-nav__link user-nav__link--EntegrityPage">
+                О продукте
+                </Link>
+              </div>
+              <div className="user-nav__item">
+                <Link to="/DemoPage" className="user-nav__link user-nav__link--DemoPage">
+                Демо
+                </Link>
+              </div>
+              <div className="user-nav__item">
+                <Link to="/DocumentsPage" className="user-nav__link user-nav__link--DocumentsPage">
+                Документы
+                </Link>
+              </div>
+              <div className="user-nav__item">
+                <Link to="/IntegratorPage" className="user-nav__link user-nav__link--IntegratorPage">
+                Интегратор
+                </Link>
+              </div>
+              <div className="user-nav__item">
+                <Link to="/LicensingPage" className="user-nav__link user-nav__link--LicensingPage">
+                Лицензия
+                </Link>
+              </div>
+              <div className="user-nav__item">
+                <Link to="/SupportPage" className="user-nav__link user-nav__link--SupportPage">
+               Техническая поддержка
+                </Link>
+              </div>
+              <div className="user-nav__item">
+                <Link to="/SystemRequirementspage" className="user-nav__link user-nav__link--SystemRequirementspage">
+               Системные требования
+                </Link>
               </div>
             </div>
           </div>

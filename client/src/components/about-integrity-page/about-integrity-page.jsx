@@ -8,7 +8,7 @@ const EntegrityPage = function () {
         <div class="page-header__top-wrapper">
           <p class="page-header__slogan">
             <a href="#" class="page-header__logo">
-              <img src="img/logo-elesy.svg" width="67" height="40" alt="">
+              <img src="img/logo-elesy.svg" width="67" height="40" alt="" />
             </a>
             Автоматизация технологических процессов
           </p>
