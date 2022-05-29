@@ -1,6 +1,6 @@
 // входная точка для сборки js файлов
 
-console.log(`Скрипты подключены`);
+// console.log(`Скрипты подключены`);
 
 
 const pageNav = document.querySelector(`.page-header__nav`);

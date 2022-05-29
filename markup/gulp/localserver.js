@@ -17,6 +17,7 @@ const localserver = () => {
     open: false,
     cors: true,
     ui: false,
+    ghostMode: false,
   });
 
   gulp.watch(`src/html/*.html`, gulp.series(html, refresh));
