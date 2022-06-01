@@ -1,15 +1,15 @@
 .page-content {
   &--innerpage {
-    background-color: rgba(255, 255, 255, 0.75);
-
     .page-content__wrapper {
+      display: grid;
+      justify-content: space-between;
+
       padding-top: 25px;
       padding-bottom: 80px;
-      display: grid;
+
       grid-template-rows: min-content min-content;
       grid-template-columns: 300px auto;
       column-gap: 50px;
-      justify-content: space-between;
       grid-template-areas:
         "breadcrumbs breadcrumbs"
         "side-menu text-content";
@@ -17,7 +17,6 @@
   }
 
   &--login-page {
-    background-color: rgba(52, 84, 122, 0.15);
     display: flex;
     align-items: center;
 
@@ -28,32 +27,33 @@
   }
 
   &--not-found {
-    background-color: rgba(255, 255, 255, 0.75);
     display: flex;
 
     .page-content__wrapper {
-      padding-top: 40px;
-      padding-bottom: 40px;
       display: flex;
       align-items: center;
       justify-content: center;
+
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
   }
 }
 
 .page-content__wrapper {
   width: 1220px;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .page-content__breadcrumbs {
-  grid-area: breadcrumbs;
   margin: 0;
   margin-bottom: 40px;
   margin-left: 10px;
+
+  grid-area: breadcrumbs;
 }
 
 .page-content__side-menu {
@@ -66,19 +66,19 @@
 
 .page-content__login-form {
   width: 350px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .page-content__registration-form {
   width: 730px;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .page-content__not-found {
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 @media (max-width: 1219px) {
@@ -107,6 +107,7 @@
   .page-content--innerpage {
     .page-content__wrapper {
       display: block;
+
       padding-top: 20px;
       padding-bottom: 40px;
     }
@@ -114,8 +115,8 @@
 
   .page-content__wrapper {
     width: 375px;
-    padding-left: 30px;
     padding-right: 30px;
+    padding-left: 30px;
   }
 
   .page-content__login-form {

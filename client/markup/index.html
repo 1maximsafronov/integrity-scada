@@ -11,57 +11,29 @@
 
 <body>
   <div class="page">
-    <header class="page-header">
-      <div class="page-header__top">
-        <div class="page-header__top-wrapper">
-          <p class="page-header__slogan">
-            <a href="#" class="page-header__logo">
-              <img src="img/logo-elesy.svg" width="67" height="40" alt="">
-            </a>
-            Автоматизация технологических процессов
-          </p>
-          <a href="" class="page-header__phone">
-            +7 (3822) 601-012
+    <header class="page-header page-header--closed-nav">
+      <div class="page-header__wrapper">
+        <div class="page-header__main-nav">
+          <a href="index.html" class="page-header__logo">
+            <img src="img/logo-elesy.svg" width="67" height="40" alt="">
           </a>
+          <div class="page-header__nav-list">
+            <a href="products.html" class="page-header__nav-item page-header__nav-item--current">Продукты</a>
+            <a href="support.html" class="page-header__nav-item">Поддержка</a>
+            <a href="" class="page-header__nav-item">Контакты</a>
+          </div>
+          <a href="tel:+73822601012" class="page-header__phone">
+            <svg class="page-header__phone-icon" width="20" height="20" fill="#004578">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            +7 (3822) 601-012</a>
         </div>
-      </div>
-      <div class="page-header__nav page-header__nav--closed">
-        <div class="page-header__nav-top">
-          <button class="page-header__nav-toggle">
-            <span class="visually-hidden">
-              Открыть меню
-            </span>
-          </button>
-        </div>
-        <div class="page-header__nav-wrapper">
-          <ul class="main-nav">
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">
-                Продукты
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="#" class="main-nav__link">
-                Поддержка
-              </a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a href="#" class="main-nav__link">
-                Контакты
-              </a>
-            </li>
-          </ul>
-          <div class="user-nav">
-            <div class="user-nav__item">
-              <a href="#" class="user-nav__link user-nav__link--login">
-                Вход
-              </a>
-            </div>
-            <div class="user-nav__item">
-              <a href="#" class="user-nav__link user-nav__link--registration">
-                Регистрация
-              </a>
-            </div>
+
+        <div class="page-header__user-nav">
+          <button class="page-header__nav-toggler"></button>
+          <div class="page-header__user-nav-list">
+            <a href="login.html" class="page-header__user-nav-item">Вход</a>
+            <a href="registration.html" class="page-header__user-nav-item">Регистрация</a>
           </div>
         </div>
       </div>
@@ -71,30 +43,29 @@
       <h1 class="visually-hidden">Integrity Scada</h1>
       <section class="promo">
         <div class="promo__wrapper">
-          <div class="promo__info">
-            <p class="promo__logo">
-              <img class="promo__logo-image" src="img/logo-integrity.svg" width="450" height="115" alt="">
-            </p>
-            <h2 class="promo__title">
-              кроссплатформенные решения
-              <span class="promo__small-title">
-                для управления производством
-              </span>
-            </h2>
-            <p class="promo__desc">
-              Платформа для создания систем управления
-              и автоматизации, без ограничения
-              на использование по отраслям промышленности
-              и типам технологических процессов.
-            </p>
-            <a href="" class="promo__demo-link btn">
+          <p class="promo__logo">
+            <img class="promo__logo-image" src="img/logo-integrity.svg" width="450" height="115" alt="">
+          </p>
+          <h2 class="promo__title">
+            кроссплатформенные решения
+            <span class="promo__small-title">
+              для управления производством
+            </span>
+          </h2>
+          <p class="promo__desc">
+            Платформа для создания систем управления
+            и автоматизации, без ограничения
+            на использование по отраслям промышленности
+            и типам технологических процессов.
+          </p>
+          <div class="promo__links">
+            <a href="" class="promo__link btn">
               Демо
             </a>
+            <a href="" class="promo__link promo__link--white btn">
+              Узнать цену
+            </a>
           </div>
-          <div class="promo__slider">
-
-          </div>
-
         </div>
       </section>
       <section class="products">
@@ -263,6 +234,7 @@
       </section>
       <section class="gallery">
         <div class="gallery__wrapper">
+          <h2 class="visually-hidden">Галлерея мнемосхем</h2>
           <ul class="gallery__list">
             <li class="gallery__item">
               <div class="gallery__picture"></div>
@@ -299,7 +271,7 @@
       </section>
       <section class="partners">
         <div class="partners__wrapper">
-          <h2 class="visually-hidden">Наши партнёры</h2>
+          <h2 class="partners__title">Партнёры</h2>
           <ul class="partners__list">
             <li class="partners__item">
               <img src="img/logo-transneft.svg" alt="Транснефть">
@@ -322,6 +294,61 @@
           </ul>
         </div>
       </section>
+      <section class="news">
+        <div class="news__wrapper">
+          <h2 class="news__title">Новости</h2>
+          <ul class="news__list">
+            <li class="news__item">
+              <div class="news__item-head">
+                <h3 class="news__item-title">Внедрение</h3>
+                <p class="news__item-date">21.10.2022</p>
+              </div>
+              <p class="news__item-desc">Обновление компонент, регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп
+                пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпиг
+                ыпвм шгнпг п пгнпгеаек нОбновление компонет.
+                Регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпи..</p>
+              <p class="news__item-picture"></p>
+              <a href="" class="news__item-link">Подробнее</a>
+            </li>
+            <li class="news__item">
+              <div class="news__item-head">
+                <h3 class="news__item-title">Релиз 5.1</h3>
+                <p class="news__item-date">22.04.2022</p>
+              </div>
+              <p class="news__item-desc">Обновление компонент, регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп
+                пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпиг
+                ыпвм шгнпг п пгнпгеаек нОбновление компонет.</p>
+              <p class="news__item-picture"></p>
+              <a href="" class="news__item-link">Подробнее</a>
+            </li>
+            <li class="news__item">
+              <div class="news__item-head">
+                <h3 class="news__item-title">Проводник в царство мертвых</h3>
+                <p class="news__item-date">10.05.2022</p>
+              </div>
+              <p class="news__item-desc">Обновление компонент, регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп
+                пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпиг
+                ыпвм шгнпг п пгнпгеаек нОбновление компонет.
+                Регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп пгщнмпг гнм гмгм гнпвпсвгпс....</p>
+              <p class="news__item-picture"></p>
+              <a href="" class="news__item-link">Подробнее</a>
+            </li>
+            <li class="news__item">
+              <div class="news__item-head">
+                <h3 class="news__item-title">Итеграция, создаем вместе</h3>
+                <p class="news__item-date">13.11.2021</p>
+              </div>
+              <p class="news__item-desc">Обновление компонент, регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп
+                пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпиг
+                ыпвм шгнпг п пгнпгеаек нОбновление компонет.
+                Регулирование системы, орпргнспрш шщ.</p>
+              <p class="news__item-picture"></p>
+              <a href="" class="news__item-link">Подробнее</a>
+            </li>
+          </ul>
+          <a href="#" class="news__more">Все новости</a>
+        </div>
+      </section>
       <section class="user-reuest">
         <div class="user-reuest__wrapper">
           <h2 class="user-reuest__title">
@@ -332,7 +359,7 @@
           <p class="user-reuest__desc">
             Заполните форму и получите доступ к приложению.
           </p>
-          <form id="request-form" action="" class="user-reuest__form">
+          <form id="request-form" action="index.html" class="user-reuest__form">
             <p class="user-reuest__textbox">
               <label class="visually-hidden" for="request-form-user-name">Фамилия Имя Отчество</label>
               <input class="custom-text-input" type="text" name="request-form-user-name" id="request-form-user-name"

@@ -10,58 +10,30 @@
 </head>
 
 <body>
-  <div class="page">
-    <header class="page-header">
-      <div class="page-header__top">
-        <div class="page-header__top-wrapper">
-          <p class="page-header__slogan">
-            <a href="index.html" class="page-header__logo">
-              <img src="img/logo-elesy.svg" width="67" height="40" alt="">
-            </a>
-            Автоматизация технологических процессов
-          </p>
-          <a href="" class="page-header__phone">
-            +7 (3822) 601-012
+  <div class="page page--login">
+    <header class="page-header page-header--closed-nav">
+      <div class="page-header__wrapper">
+        <div class="page-header__main-nav">
+          <a href="index.html" class="page-header__logo">
+            <img src="img/logo-elesy.svg" width="67" height="40" alt="">
           </a>
+          <div class="page-header__nav-list">
+            <a href="products.html" class="page-header__nav-item page-header__nav-item--current">Продукты</a>
+            <a href="support.html" class="page-header__nav-item">Поддержка</a>
+            <a href="" class="page-header__nav-item">Контакты</a>
+          </div>
+          <a href="tel:+73822601012" class="page-header__phone">
+            <svg class="page-header__phone-icon" width="20" height="20" fill="#004578">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            +7 (3822) 601-012</a>
         </div>
-      </div>
-      <div class="page-header__nav page-header__nav--closed">
-        <div class="page-header__nav-top">
-          <button class="page-header__nav-toggle">
-            <span class="visually-hidden">
-              Открыть меню
-            </span>
-          </button>
-        </div>
-        <div class="page-header__nav-wrapper">
-          <ul class="main-nav">
-            <li class="main-nav__item">
-              <a href="products.html" class="main-nav__link">
-                Продукты
-              </a>
-            </li>
-            <li class="main-nav__item">
-              <a href="support.html" class="main-nav__link">
-                Поддержка
-              </a>
-            </li>
-            <li class="main-nav__item main-nav__item--active">
-              <a href="#" class="main-nav__link">
-                Контакты
-              </a>
-            </li>
-          </ul>
-          <div class="user-nav">
-            <div class="user-nav__item">
-              <a href="login.html" class="user-nav__link user-nav__link--login">
-                Вход
-              </a>
-            </div>
-            <div class="user-nav__item">
-              <a href="registration.html" class="user-nav__link user-nav__link--registration">
-                Регистрация
-              </a>
-            </div>
+
+        <div class="page-header__user-nav">
+          <button class="page-header__nav-toggler"></button>
+          <div class="page-header__user-nav-list">
+            <a href="login.html" class="page-header__user-nav-item">Вход</a>
+            <a href="registration.html" class="page-header__user-nav-item">Регистрация</a>
           </div>
         </div>
       </div>
