@@ -1,129 +1,39 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import PageHeader from "components/page-header/page-header";
+import PageFooter from "components/page-footer/page-footer";
 
-
-const MainPage = function () {
+const MainPage = ()=> {
   return (
     <div className="page">
-      <header className="page-header">
-        <div className="page-header__top">
-          <div className="page-header__top-wrapper">
-            <p className="page-header__slogan">
-              <Link to="/" className="page-header__logo">
-                <img src="img/logo-elesy.svg" width="67" height="40" alt="" />
-              </Link>
-            Автоматизация технологических процессов
-            </p>
-            <a href="" className="page-header__phone">
-            +7 (3822) 601-012
-            </a>
-          </div>
-        </div>
-        <div className="page-header__nav page-header__nav--closed">
-          <div className="page-header__nav-top">
-            <button className="page-header__nav-toggle">
-              <span className="visually-hidden">
-              Открыть меню
-              </span>
-            </button>
-          </div>
-          <div className="page-header__nav-wrapper">
-            <ul className="main-nav">
-              <li className="main-nav__item">
-                <a href="#" className="main-nav__link">
-                Продукты
-                </a>
-              </li>
-              <li className="main-nav__item">
-                <a href="#" className="main-nav__link">
-                Поддержка
-                </a>
-              </li>
-              <li className="main-nav__item main-nav__item--active">
-                <a href="#" className="main-nav__link">
-                Контакты
-                </a>
-              </li>
-            </ul>
-            <div className="user-nav">
-              <div className="user-nav__item">
-                <Link to="/login" className="user-nav__link user-nav__link--login">
-                Вход
-                </Link>
-              </div>
-              <div className="user-nav__item">
-                <Link to="/registration" className="user-nav__link user-nav__link--registration">
-                Регистрация
-                </Link>
-              </div>
-              <div className="user-nav__item">
-                <Link to="/EntegrityPage" className="user-nav__link user-nav__link--EntegrityPage">
-                О продукте
-                </Link>
-              </div>
-              <div className="user-nav__item">
-                <Link to="/DemoPage" className="user-nav__link user-nav__link--DemoPage">
-                Демо
-                </Link>
-              </div>
-              <div className="user-nav__item">
-                <Link to="/DocumentsPage" className="user-nav__link user-nav__link--DocumentsPage">
-                Документы
-                </Link>
-              </div>
-              <div className="user-nav__item">
-                <Link to="/IntegratorPage" className="user-nav__link user-nav__link--IntegratorPage">
-                Интегратор
-                </Link>
-              </div>
-              <div className="user-nav__item">
-                <Link to="/LicensingPage" className="user-nav__link user-nav__link--LicensingPage">
-                Лицензия
-                </Link>
-              </div>
-              <div className="user-nav__item">
-                <Link to="/SupportPage" className="user-nav__link user-nav__link--SupportPage">
-               Техническая поддержка
-                </Link>
-              </div>
-              <div className="user-nav__item">
-                <Link to="/SystemRequirementspage" className="user-nav__link user-nav__link--SystemRequirementspage">
-               Системные требования
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <PageHeader />
 
       <main className="page-content">
         <h1 className="visually-hidden">Integrity Scada</h1>
         <section className="promo">
           <div className="promo__wrapper">
-            <div className="promo__info">
-              <p className="promo__logo">
-                <img className="promo__logo-image" src="img/logo-integrity.svg" width="450" height="115" alt="" />
-              </p>
-              <h2 className="promo__title">
-              кроссплатформенные решения
-                <span className="promo__small-title">
-                для управления производством
-                </span>
-              </h2>
-              <p className="promo__desc">
-              Платформа для создания систем управления
-              и автоматизации, без ограничения
-              на использование по отраслям промышленности
-              и типам технологических процессов.
-              </p>
-              <a href="" className="promo__demo-link btn">
+            <p className="promo__logo">
+              <img className="promo__logo-image" src="img/logo-integrity.svg" width="450" height="115" alt="" />
+            </p>
+            <h2 className="promo__title">
+            кроссплатформенные решения
+              <span className="promo__small-title">
+              для управления производством
+              </span>
+            </h2>
+            <p className="promo__desc">
+            Платформа для создания систем управления
+            и автоматизации, без ограничения
+            на использование по отраслям промышленности
+            и типам технологических процессов.
+            </p>
+            <div className="promo__links">
+              <a href="" className="promo__link btn">
               Демо
               </a>
+              <a href="" className="promo__link promo__link--white btn">
+              Узнать цену
+              </a>
             </div>
-            <div className="promo__slider">
-
-            </div>
-
           </div>
         </section>
         <section className="products">
@@ -292,6 +202,7 @@ const MainPage = function () {
         </section>
         <section className="gallery">
           <div className="gallery__wrapper">
+            <h2 className="visually-hidden">Галлерея мнемосхем</h2>
             <ul className="gallery__list">
               <li className="gallery__item">
                 <div className="gallery__picture"></div>
@@ -328,7 +239,7 @@ const MainPage = function () {
         </section>
         <section className="partners">
           <div className="partners__wrapper">
-            <h2 className="visually-hidden">Наши партнёры</h2>
+            <h2 className="partners__title">Партнёры</h2>
             <ul className="partners__list">
               <li className="partners__item">
                 <img src="img/logo-transneft.svg" alt="Транснефть" />
@@ -351,6 +262,61 @@ const MainPage = function () {
             </ul>
           </div>
         </section>
+        <section className="news">
+          <div className="news__wrapper">
+            <h2 className="news__title">Новости</h2>
+            <ul className="news__list">
+              <li className="news__item">
+                <div className="news__item-head">
+                  <h3 className="news__item-title">Внедрение</h3>
+                  <p className="news__item-date">21.10.2022</p>
+                </div>
+                <p className="news__item-desc">Обновление компонент, регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп
+                пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпиг
+                ыпвм шгнпг п пгнпгеаек нОбновление компонет.
+                Регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпи..</p>
+                <p className="news__item-picture"></p>
+                <a href="" className="news__item-link">Подробнее</a>
+              </li>
+              <li className="news__item">
+                <div className="news__item-head">
+                  <h3 className="news__item-title">Релиз 5.1</h3>
+                  <p className="news__item-date">22.04.2022</p>
+                </div>
+                <p className="news__item-desc">Обновление компонент, регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп
+                пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпиг
+                ыпвм шгнпг п пгнпгеаек нОбновление компонет.</p>
+                <p className="news__item-picture"></p>
+                <a href="" className="news__item-link">Подробнее</a>
+              </li>
+              <li className="news__item">
+                <div className="news__item-head">
+                  <h3 className="news__item-title">Проводник в царство мертвых</h3>
+                  <p className="news__item-date">10.05.2022</p>
+                </div>
+                <p className="news__item-desc">Обновление компонент, регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп
+                пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпиг
+                ыпвм шгнпг п пгнпгеаек нОбновление компонет.
+                Регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп пгщнмпг гнм гмгм гнпвпсвгпс....</p>
+                <p className="news__item-picture"></p>
+                <a href="" className="news__item-link">Подробнее</a>
+              </li>
+              <li className="news__item">
+                <div className="news__item-head">
+                  <h3 className="news__item-title">Итеграция, создаем вместе</h3>
+                  <p className="news__item-date">13.11.2021</p>
+                </div>
+                <p className="news__item-desc">Обновление компонент, регулирование системы, орпргнспрш шщ гш8рншавс р пргщнп
+                пгщнмпг гнм гмгм гнпвпсвгпсмыг гнпигпиг
+                ыпвм шгнпг п пгнпгеаек нОбновление компонет.
+                Регулирование системы, орпргнспрш шщ.</p>
+                <p className="news__item-picture"></p>
+                <a href="" className="news__item-link">Подробнее</a>
+              </li>
+            </ul>
+            <a href="#" className="news__more">Все новости</a>
+          </div>
+        </section>
         <section className="user-reuest">
           <div className="user-reuest__wrapper">
             <h2 className="user-reuest__title">
@@ -361,7 +327,7 @@ const MainPage = function () {
             <p className="user-reuest__desc">
             Заполните форму и получите доступ к приложению.
             </p>
-            <form id="request-form" action="" className="user-reuest__form">
+            <form id="request-form" action="index.html" className="user-reuest__form">
               <p className="user-reuest__textbox">
                 <label className="visually-hidden" htmlFor="request-form-user-name">Фамилия Имя Отчество</label>
                 <input className="custom-text-input" type="text" name="request-form-user-name" id="request-form-user-name"
@@ -419,82 +385,9 @@ const MainPage = function () {
 
       </main>
 
-      <footer className="page-footer">
-        <div className="page-footer__wrapper">
-          <div className="page-footer__nav">
-            <h2 className="page-footer__title page-footer__nav-title">
-            Поддержка
-            </h2>
-            <ul className="page-footer__nav-list">
-              <li className="page-footer__nav-item">
-                <a href="" className="page-footer__nav-link">
-                Документы
-                </a>
-              </li>
-              <li className="page-footer__nav-item">
-                <a href="" className="page-footer__nav-link">
-                Видеоуроки
-                </a>
-              </li>
-              <li className="page-footer__nav-item">
-                <a href="" className="page-footer__nav-link">
-                Тех.поддержка
-                </a>
-              </li>
-              <li className="page-footer__nav-item">
-                <a href="" className="page-footer__nav-link">
-                Заявка на обучение
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="page-footer__contacts">
-            <h2 className="page-footer__title">
-            Головной оффис
-            </h2>
-            <a href="mailto:" className="page-footer__contacts-item page-footer__contacts-item--mail">
-            elesy@elesy.ru
-            </a>
-            <a href="tel:+" className="page-footer__contacts-item page-footer__contacts-item--tel">
-            +7 (3822) 601-000
-            </a>
-          </div>
-          <div className="page-footer__contacts">
-            <h2 className="page-footer__title">
-            Техническая поддержка
-            </h2>
-            <a href="mailto:" className="page-footer__contacts-item page-footer__contacts-item--mail">
-            support@elesy.ru
-            </a>
-            <a href="tel:+" className="page-footer__contacts-item page-footer__contacts-item--tel">
-            +7 (3822) 60-10-60
-            </a>
-            <a href="tel:+" className="page-footer__contacts-item page-footer__contacts-item--fax">
-            +7 (3822) 601-001
-            </a>
-          </div>
-          <div className="page-footer__contacts">
-            <h2 className="page-footer__title">
-            Коммерческий отдел
-            </h2>
-            <a href="mailto:" className="page-footer__contacts-item page-footer__contacts-item--mail">
-            scada@elesy.ru
-            </a>
-            <a href="tel:+" className="page-footer__contacts-item page-footer__contacts-item--tel">
-            +7 (3822) 601-012
-            </a>
-            <a href="tel:+" className="page-footer__contacts-item page-footer__contacts-item--fax">
-            +7 (3822) 601-001
-            </a>
-          </div>
-        </div>
-        <p className="page-footer__copyright">
-        (с) 2022 Все права защищены
-        </p>
-      </footer>
+      <PageFooter />
     </div>
   );
 };
-
 
 export default MainPage;

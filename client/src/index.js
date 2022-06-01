@@ -1,9 +1,13 @@
 import React from "react";
 import ReactDom from "react-dom";
+import {Provider} from "react-redux";
 import App from "./components/app/app.jsx";
+import {store} from "./store/index";
 
 ReactDom.render(
-    <App/>
+    <Provider store={store}>
+      <App/>
+    </Provider>
     ,
     document.querySelector(`#root`)
 );

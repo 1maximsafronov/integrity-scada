@@ -1,52 +1,31 @@
-import {BrowserRouter, Switch, Route} from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 import React from "react";
-import MainPage from "../main-page/main-page";
-import LoginPage from "components/login-page/login-page";
-import RegistrationPage from "components/registration-page/registration-page";
-import EntegrityPage from "components/about-integrity-page/about-integrity-page";
-import DemoPage from "components/demo/demo-page";
-import DocumentsPage from "components/documents/documents-page";
-import IntegratorPage from "components/integrator/integrator-page";
-import LicensingPage from "components/licensing/licensing-page";
-import SupportPage from "components/support/support-page";
-import SystemRequirementspage from "components/system-requirements/system-requirements-page";
-
+import MainPage from "components/pages/main-page";
+import LoginPage from "components/pages/login-page";
+import RegistrationPage from "components/pages/registration-page";
+import NotFoundPage from "components/pages/not-found-page";
+import ProductsPage from "components/pages/products-page";
+import SupportPage from "components/pages/support-page";
+import UserPage from "components/pages/user-page";
+import AdminPage from "components/pages/admin-page";
 
 const App = () => {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route exact path="/">
-          <MainPage />
-        </Route>
-        <Route exact path="/login">
-          <LoginPage />
-        </Route>
-        <Route exact path="/registration">
-          <RegistrationPage />
-        </Route>
-        <Route exact path="/EntegrityPage">
-          <EntegrityPage />
-        </Route>
-        <Route exact path="/DemoPage">
-          <DemoPage />
-        </Route>
-        <Route exact path="/DocumentsPage">
-          <DocumentsPage />
-        </Route>
-        <Route exact path="/IntegratorPage">
-          <IntegratorPage />
-        </Route>
-        <Route exact path="/LicensingPage">
-          <LicensingPage />
-        </Route>
-        <Route exact path="/SupportPage">
-          <SupportPage />
-        </Route>
-        <Route exact path="/SystemRequirementspage">
-          <SystemRequirementspage />
-        </Route>
-      </Switch>
+      <Routes>
+        <Route path="/" element={<MainPage />}/>
+        <Route path='login' element={<LoginPage />}/>
+        <Route path='registration' element={<RegistrationPage />}/>
+        <Route path='products/*' element={<ProductsPage />}/>
+        <Route path='support/*' element={<SupportPage />}/>
+        <Route path='user/*' element={<UserPage />}/>
+        <Route path='admin/*' element={<AdminPage />}/>
+        <Route path='*' element={<NotFoundPage />}/>
+      </Routes>
     </BrowserRouter>
 
   );
