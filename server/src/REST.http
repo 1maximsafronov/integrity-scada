@@ -28,7 +28,7 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/api/login
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwiZW1haWwiOiJ0ZXN0MUBtYWlsLmNvbSIsInBhc3N3b3JkIjoiNWY0ZGNjM2I1YWE3NjVkNjFkODMyN2RlYjg4MmNmOTkiLCJuYW1lIjoi0JjQstCw0L3QvtCyINCY0LLQsNC9INCY0LLQsNC90L7QstC40YciLCJwaG9uZSI6Iis3ODAwNTU1MzUzNSIsImNvbXBhbnkiOiLQndCV0LHRi9Cy0LDQu9C60LAiLCJjaXR5Ijoi0KHRgtGA0LDQvdCwINC30LDQsdCy0LXQvdC40Y8iLCJyb2xlIjoiQmFzaWMiLCJyZWdfZGF0ZSI6IjIwMjItMDQtMTZUMDY6MjQ6MzYuMDU3WiIsImNyZWF0ZWRBdCI6IjIwMjItMDQtMTZUMDY6MjQ6MzYuMDU5WiIsInVwZGF0ZWRBdCI6IjIwMjItMDQtMTZUMDY6MjQ6MzYuMDU5WiIsImlhdCI6MTY1MDA5MTgzMywiZXhwIjoxNjUwMTM1MDMzfQ.oJRhbrOSCft-J2-CP-8Ye5qfJFCrFkrkMPY7ndOFIj8
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYmFzaWMiLCJpZCI6MiwiY2l0eSI6ItCh0YLRgNCw0L3QsCDQt9Cw0LHQstC10L3QuNGPIiwibmFtZSI6ItCY0LLQsNC90L7QsiDQmNCy0LDQvSDQmNCy0LDQvdC-0LLQuNGHIiwicGhvbmUiOiIrNzgwMDU1NTM1MzUiLCJlbWFpbCI6InRlc3QzQG1haWwuY29tIiwiY29tcGFueSI6ItCd0JXQsdGL0LLQsNC70LrQsCIsInBhc3N3b3JkIjoiNWY0ZGNjM2I1YWE3NjVkNjFkODMyN2RlYjg4MmNmOTkiLCJ1cGRhdGVkQXQiOiIyMDIyLTA2LTAzVDA4OjA2OjUxLjQ0MFoiLCJjcmVhdGVkQXQiOiIyMDIyLTA2LTAzVDA4OjA2OjUxLjQ0MFoiLCJpYXQiOjE2NTQyNDM2MTEsImV4cCI6MTY1NDI4NjgxMX0.wjgBBmbxNRG6r92MphfPxIdtDQH4YeqspOIUifsFz5o
 
 ###
 
@@ -39,6 +39,12 @@ Content-Type: application/json
   "email": "test1@mail.com",
   "password": "password"
 }
+
+###
+
+
+GET  http://localhost:3000/api/logout
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYmFzaWMiLCJpZCI6MiwiY2l0eSI6ItCh0YLRgNCw0L3QsCDQt9Cw0LHQstC10L3QuNGPIiwibmFtZSI6ItCY0LLQsNC90L7QsiDQmNCy0LDQvSDQmNCy0LDQvdC-0LLQuNGHIiwicGhvbmUiOiIrNzgwMDU1NTM1MzUiLCJlbWFpbCI6InRlc3QzQG1haWwuY29tIiwiY29tcGFueSI6ItCd0JXQsdGL0LLQsNC70LrQsCIsInBhc3N3b3JkIjoiNWY0ZGNjM2I1YWE3NjVkNjFkODMyN2RlYjg4MmNmOTkiLCJ1cGRhdGVkQXQiOiIyMDIyLTA2LTAzVDA4OjA2OjUxLjQ0MFoiLCJjcmVhdGVkQXQiOiIyMDIyLTA2LTAzVDA4OjA2OjUxLjQ0MFoiLCJpYXQiOjE2NTQyNDM2MTEsImV4cCI6MTY1NDI4NjgxMX0.wjgBBmbxNRG6r92MphfPxIdtDQH4YeqspOIUifsFz5o
 
 ###
 
@@ -53,3 +59,25 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/api/user/1
+
+###
+
+POST http://localhost:3000/api/order
+Content-Type: application/json
+
+{
+  "email": "tes4t3@mail.com",
+  "userName": "Иванов Иван Иванович",
+  "phone": "+78005553535",
+  "company": "НЕбывалка",
+  "city": "Страна забвения",
+  "type": "documents"
+}
+
+###
+
+GET http://localhost:3000/api/orders
+Content-Type: application/json
+
+
+###

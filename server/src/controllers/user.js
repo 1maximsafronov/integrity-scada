@@ -151,6 +151,10 @@ class UserController {
       });
     }
   }
+
+  async logout(req, res) {
+    req.session.destroy();
+  }
 }
 
 module.exports = new UserController();

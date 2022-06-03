@@ -18,6 +18,9 @@ app.use(express.json());
 const start = async () => {
   try {
     await sequelize.authenticate();
+    // await sequelize.sync({
+    //     force: true
+    // });
     await sequelize.sync();
     await userContriller.createAdmin();
     app.listen(HTTP_PORT, () => {
