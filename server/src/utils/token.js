@@ -17,6 +17,21 @@ const authenticateToken = (req, res, next) => {
   });
 }
 
+const adminAuth = (req, res, next) => {
+  const token = req.headers["authorization"];
+  if (token == null) {
+    return res.sendStatus(401);
+  }
+  jwt.verify(token, SECRET_KEY, (err, user) => {
+    if (err || user.role !== "admin") {
+      return res.sendStatus(403)
+    }
+    req.user = user;
+
+    next();
+  });
+}
+
 const verifyToken = (token)=> {
   return jwt.verify(token, SECRET_KEY);
 }
@@ -25,5 +40,6 @@ const verifyToken = (token)=> {
 module.exports = {
   generateToken,
   authenticateToken,
-  verifyToken
+  verifyToken,
+  adminAuth
 };

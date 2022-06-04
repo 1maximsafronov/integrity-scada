@@ -1,12 +1,20 @@
 import React from "react";
 import ReactDom from "react-dom";
+import {unstable_HistoryRouter as HistoryRouter} from "react-router-dom";
 import {Provider} from "react-redux";
+
 import App from "./components/app/app.jsx";
 import {store} from "./store/index";
+import {checkAuthAction} from "./store/api-actions";
+import browserHistory from "./browser-history";
+
+store.dispatch(checkAuthAction());
 
 ReactDom.render(
     <Provider store={store}>
-      <App/>
+      <HistoryRouter history={browserHistory}>
+        <App/>
+      </HistoryRouter>
     </Provider>
     ,
     document.querySelector(`#root`)

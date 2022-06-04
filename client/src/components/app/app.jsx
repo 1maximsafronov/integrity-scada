@@ -1,5 +1,5 @@
 import {
-  BrowserRouter,
+  // BrowserRouter,
   Routes,
   Route,
 } from "react-router-dom";
@@ -15,19 +15,16 @@ import AdminPage from "components/pages/admin-page";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainPage />}/>
-        <Route path='login' element={<LoginPage />}/>
-        <Route path='registration' element={<RegistrationPage />}/>
-        <Route path='products/*' element={<ProductsPage />}/>
-        <Route path='support/*' element={<SupportPage />}/>
-        <Route path='user/*' element={<UserPage />}/>
-        <Route path='admin/*' element={<AdminPage />}/>
-        <Route path='*' element={<NotFoundPage />}/>
-      </Routes>
-    </BrowserRouter>
-
+    <Routes>
+      <Route path="/" element={<MainPage />}/>
+      <Route path='login' element={<LoginPage />}/>
+      <Route path='registration' element={<RegistrationPage />}/>
+      <Route path='products/*' element={<ProductsPage />}/>
+      <Route path='support/*' element={<SupportPage />}/>
+      <Route path='user/*' element={<UserPage />}/>
+      <Route path='admin/*' element={<AdminPage />}/>
+      <Route path='*' element={<NotFoundPage />}/>
+    </Routes>
   );
 };
 

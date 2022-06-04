@@ -2,18 +2,24 @@ import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {isUserAuthorized} from "store/selectors";
+import {logoutAction} from "store/api-actions";
 
 const PageHeader = (props) => {
   const isUserAuth = useSelector(isUserAuthorized);
   const [closedNav, setClosedNav] = useState(true);
   const {activMenuItem = ``} = props;
+  const dispatch = useDispatch();
 
   const handleMenuToggleClick = () => {
     setClosedNav(!closedNav);
   };
 
+  const handleLogoutClick = (evt) => {
+    evt.preventDefault();
+    dispatch(logoutAction());
+  };
 
   const renderUserNav = () => {
     if (isUserAuth) {
@@ -22,12 +28,12 @@ const PageHeader = (props) => {
           <Link to="/user" className="page-header__user-nav-item">
           Личный кабинет
           </Link>
-          <a href="login.html" className="page-header__user-nav-item page-header__user-nav-item--logout">
+          <Link to="/logout" className="page-header__user-nav-item page-header__user-nav-item--logout" onClick={handleLogoutClick}>
             <span className="visually-hidden">Выход</span>
             <svg className="" width="20" height="20" fill="#ffffff">
               <use xlinkHref="img/sprite.svg#icon-exit"></use>
             </svg>
-          </a>
+          </Link>
         </div>
       );
     }

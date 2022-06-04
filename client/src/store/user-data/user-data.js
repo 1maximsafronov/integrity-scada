@@ -3,7 +3,7 @@ import {AuthorizationStatus} from 'const';
 import {loadUserDocuments, loadUserLicenses, loadUserOrders, requireAuthorization, setUserData} from 'store/actions';
 
 const initialState = {
-  authorizationStatus: AuthorizationStatus.Auth,
+  authorizationStatus: AuthorizationStatus.NoAuth,
   userData: null,
   userOrders: [],
   availableDocuments: [],

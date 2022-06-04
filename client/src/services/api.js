@@ -16,7 +16,7 @@ export const createAPI = () => {
     const token = getToken();
 
     if (token) {
-      config.headers[`x-token`] = token;
+      config.headers[`authorization`] = token;
     }
 
     return config;

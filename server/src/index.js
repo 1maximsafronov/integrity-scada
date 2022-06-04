@@ -15,6 +15,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use(express.static(path.resolve(__dirname, '../../client/public')));
+
 const start = async () => {
   try {
     await sequelize.authenticate();
@@ -31,8 +33,11 @@ const start = async () => {
   }
 }
 
-app.get("/", (req, res) => res.json({ message: `alive` }));
+// app.get("/", (req, res) => res.json({ message: `alive` }));
 app.use("/api", apiRouter);
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../../client/public', 'index.html'));
+});
 app.use((req, res) => res.sendStatus(404));
 
 

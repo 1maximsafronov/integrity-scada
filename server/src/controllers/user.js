@@ -113,7 +113,7 @@ class UserController {
   async getUsersData(req, res) {
     const {user} = req;
     if (user.role !== "admin") {
-      return res.status(401).json({error: "У вас нет прав доступа"});
+      return res.status(403).json({error: "У вас нет прав доступа"});
     }
 
     try {
@@ -153,7 +153,7 @@ class UserController {
   }
 
   async logout(req, res) {
-    req.session.destroy();
+    // req.session.destroy();
   }
 }
 

@@ -1,20 +1,24 @@
-import React from "react";
-import {Routes, Route, Navigate} from "react-router-dom";
+import React, {useEffect} from "react";
+import {Routes, Route} from "react-router-dom";
 
 import PageHeader from "components/page-header/page-header";
 import PageFooter from "components/page-footer/page-footer";
 import BreadCrumbs from "components/breadcrumbs/breadcrumbs";
 import SideMenu from "components/side-menu/side-menu";
 import {sideMenuItems} from "side-menu-data";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {isUserAuthorized} from "store/selectors";
+import {redirectToRoute} from "store/actions";
 
 const UserPage = () => {
   const isUserAuth = useSelector(isUserAuthorized);
+  const dispatch = useDispatch();
 
-  if (!isUserAuth) {
-    return (<Navigate to="/login"/>);
-  }
+  useEffect(()=> {
+    if (!isUserAuth) {
+      dispatch(redirectToRoute(`/login`));
+    }
+  });
 
   return (
     <div className="page page--inner">
