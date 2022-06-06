@@ -1,0 +1,159 @@
+.documents {
+}
+
+.documents__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.documents__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.documents__link {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding-top: 20px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+
+  border: 2px solid #eceff4;
+  border-radius: 5px;
+  background: #ffffff;
+
+  &:hover,
+  &:focus {
+    border-color: #34547a;
+    box-shadow: 0 4px 10px rgba(27, 92, 139, 0.25);
+
+    .documents__download-icon {
+      fill: #34547a;
+    }
+  }
+}
+
+.documents__icon {
+  flex-shrink: 0;
+}
+
+.documents__name {
+  margin: 0;
+  margin-right: 25px;
+  margin-left: 25px;
+
+  color: #373d40;
+
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 21px;
+}
+
+.documents__download {
+  display: grid;
+  align-items: center;
+  flex-shrink: 0;
+  justify-content: center;
+
+  margin: 0;
+  margin-left: auto;
+
+  justify-items: center;
+}
+
+.documents__download-icon {
+  margin-bottom: 5px;
+}
+
+.documents__download-size {
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #c7d0e2;
+
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.documents__empty {
+  text-align: center;
+
+  font-size: 16px;
+}
+
+.documents__order-link {
+  text-decoration: underline;
+}
+
+@include media-tablet {
+  .documents {
+  }
+
+  .documents__list {
+  }
+
+  .documents__item {
+  }
+
+  .documents__icon {
+  }
+
+  .documents__link {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .documents__name {
+  }
+
+  .documents__download {
+  }
+
+  .documents__download-icon {
+  }
+
+  .documents__download-size {
+  }
+}
+
+@include media-mobile {
+  .documents {
+  }
+
+  .documents__list {
+  }
+
+  .documents__item {
+  }
+
+  .documents__link {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .documents__icon {
+  }
+
+  .documents__name {
+  }
+
+  .documents__download {
+    display: none;
+  }
+
+  .documents__download-icon {
+  }
+
+  .documents__download-size {
+  }
+}
