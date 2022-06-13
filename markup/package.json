@@ -1,54 +1,49 @@
 {
+  "private": true,
   "name": "project-name",
   "author": "author-name",
   "description": "project-description",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "start": "gulp start",
+    "start": "gulp",
     "build": "gulp build",
-    "test": "npm run editorconfig && npm run stylelint && npm run htmlhint",
     "publish": "gulp publish",
-    "clean": "gulp clean",
-    "editorconfig": "editorconfig-checker",
-    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss",
-    "htmlhint": "htmlhint \"src/html/**/*.html\""
+    "test": "npm run editorconfig && npm run stylelint",
+    "editorconfig": "eclint check",
+    "stylelint": "stylelint \"src/sass/**/*.scss\" --syntax scss"
   },
   "browserslist": [
     "last 2 versions",
-    "Firefox ESR",
     "not dead",
-    "not ie <= 11"
+    "not ie <= 11",
+    "not op_mini all",
+    "not < 0.25%"
   ],
   "engines": {
-    "node": "14.17.1"
+    "node": "^16"
   },
+  "type": "module",
   "devDependencies": {
-    "autoprefixer": "10.2.6",
-    "browser-sync": "2.26.14",
+    "autoprefixer": "10.4.5",
+    "browser-sync": "^2.27.9",
+    "browser-sync-client": "^2.27.10",
     "del": "6.0.0",
-    "editorconfig-checker": "4.0.2",
-    "gh-pages": "3.2.1",
+    "eclint": "2.8.1",
+    "gh-pages": "3.2.3",
     "gulp": "4.0.2",
+    "gulp-dart-sass": "1.0.2",
     "gulp-htmlmin": "5.0.1",
-    "gulp-imagemin": "7.1.0",
+    "gulp-imagemin": "8.0.0",
     "gulp-plumber": "1.2.1",
-    "gulp-postcss": "9.0.0",
-    "gulp-posthtml": "3.0.5",
+    "gulp-postcss": "9.0.1",
     "gulp-rename": "2.0.0",
-    "gulp-sass": "4.1.0",
-    "gulp-sourcemaps": "3.0.0",
-    "gulp-svgstore": "7.0.1",
-    "gulp-terser": "2.0.1",
+    "gulp-svgstore": "^8.0.0",
+    "gulp-terser": "2.1.0",
     "gulp-webp": "4.0.1",
-    "htmlhint": "0.15.1",
-    "postcss": "8.3.4",
-    "postcss-csso": "5.0.1",
-    "posthtml-include": "1.7.1",
+    "normalize.css": "8.0.1",
+    "postcss": "8.4.13",
+    "postcss-csso": "6.0.0",
     "stylelint": "13.13.1",
-    "stylelint-config-htmlacademy": "0.1.10"
-  },
-  "dependencies": {
-    "normalize.css": "8.0.1"
+    "stylelint-config-htmlacademy": "0.1.11"
   }
 }
