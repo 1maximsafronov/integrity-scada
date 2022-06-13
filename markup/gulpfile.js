@@ -133,6 +133,28 @@ const watcher = () => {
   gulp.watch("src/js/*.js", gulp.series(scripts));
 };
 
+const copyBuildToClient = (done) => {
+  gulp.src("build/**/*", {
+      base: "build",
+    })
+    .pipe(gulp.dest("../client/markup"));
+
+  done();
+};
+
+const copyAssets = (done) => {
+  gulp.src([
+    "build/css/**/*",
+    "build/fonts/**/*",
+    "build/img/**/*",
+  ], {
+      base: "build",
+    })
+    .pipe(gulp.dest("../client/public"));
+
+  done();
+};
+
 export const build = gulp.series(
   clean,
   copy,
@@ -149,3 +171,5 @@ export default gulp.series(
 );
 
 export const publish = gulp.series(build, loadOnGithub);
+
+export const deploy = gulp.series(build, copyBuildToClient, copyAssets);
