@@ -10,6 +10,7 @@ import AboutIntegrityContent from "components/content/about-integrity";
 import ComponentsContent from "components/content/components";
 import LicensingContent from "components/content/licensing";
 import SystemContent from "components/content/system";
+import IntegrityServer from "components/text-content/integrity-server";
 
 const ProductsPage = () => {
   return (
@@ -21,7 +22,10 @@ const ProductsPage = () => {
           <SideMenu items={sideMenuItems.PRODUCTS}/>
           <Routes>
             <Route index element={<AboutIntegrityContent />}/>
-            <Route path="components" element={<ComponentsContent />}/>
+            <Route path="components">
+              <Route index element={<ComponentsContent />}/>
+              <Route path="integrity-server" element={<IntegrityServer />}/>
+            </Route>
             <Route path="licensing" element={<LicensingContent />}/>
             <Route path="system" element={<SystemContent />}/>
           </Routes>
