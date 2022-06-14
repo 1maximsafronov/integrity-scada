@@ -24,7 +24,7 @@ const ProductsPage = () => {
             <Route index element={<AboutIntegrityContent />}/>
             <Route path="components">
               <Route index element={<ComponentsContent />}/>
-              <Route path="integrity-server" element={<IntegrityServer />}/>
+              <Route path=":id" element={<IntegrityServer />}/>
             </Route>
             <Route path="licensing" element={<LicensingContent />}/>
             <Route path="system" element={<SystemContent />}/>

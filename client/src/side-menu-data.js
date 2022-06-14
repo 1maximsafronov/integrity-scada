@@ -6,15 +6,35 @@ export const sideMenuItems = {
       submenu: [
         {
           name: `IntegrityServer`,
-          path: ``
+          path: `/products/components/integrity-server`
         },
         {
           name: `IntegrityHistoryServer`,
-          path: ``
+          path: `/products/components/integrity-history-server`
         },
         {
           name: `IntegrityReports`,
-          path: ``
+          path: `/products/components/integrity-reports`
+        },
+        {
+          name: `IntegrityDataTransport`,
+          path: `/products/components/integrity-data-transport`
+        },
+        {
+          name: `IntegrityClientSecurity`,
+          path: `/products/components/integrity-client-security`
+        },
+        {
+          name: `IntegrityHMI`,
+          path: `/products/components/integrity-hmi`
+        },
+        {
+          name: `IntegrityTrends`,
+          path: `/products/components/integrity-trends`
+        },
+        {
+          name: `IntegrityAlarms`,
+          path: `/products/components/integrity-alarms`
         },
       ]
     },
