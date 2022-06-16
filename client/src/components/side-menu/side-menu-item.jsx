@@ -20,9 +20,11 @@ const SideMenuItem = (props) => {
 
   return (
     <li className={classNames(`side-menu__item`, {"side-menu__item--active": isActive}, {"side-menu__item--opened": opened})}>
+
       <Link to={path} className="side-menu__link">
         {name}
       </Link>
+
       <SideMenuSubmenu items={submenu} onToggleClick={handleToggleClick}/>
     </li>
   );

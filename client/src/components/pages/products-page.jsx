@@ -10,25 +10,28 @@ import AboutIntegrityContent from "components/content/about-integrity";
 import ComponentsContent from "components/content/components";
 import LicensingContent from "components/content/licensing";
 import SystemContent from "components/content/system";
-import IntegrityServer from "components/text-content/integrity-server";
+import TextContent from "components/text-content/text-content";
 
 const ProductsPage = () => {
   return (
     <div className="page page--inner">
       <PageHeader activMenuItem="products"/>
+
       <main className="page-content  page-content--innerpage">
         <div className="page-content__wrapper">
           <BreadCrumbs />
           <SideMenu items={sideMenuItems.PRODUCTS}/>
+
           <Routes>
             <Route index element={<AboutIntegrityContent />}/>
             <Route path="components">
               <Route index element={<ComponentsContent />}/>
-              <Route path=":id" element={<IntegrityServer />}/>
+              <Route path=":componentName" element={<TextContent />}/>
             </Route>
             <Route path="licensing" element={<LicensingContent />}/>
             <Route path="system" element={<SystemContent />}/>
           </Routes>
+
         </div>
       </main>
 

@@ -15,10 +15,13 @@ const SupportPage = () => {
   return (
     <div className="page  page--inner">
       <PageHeader activMenuItem="support"/>
+
       <main className="page-content page-content--innerpage">
         <div className="page-content__wrapper">
+
           <BreadCrumbs/>
           <SideMenu items={sideMenuItems.SUPPORT}/>
+
           <Routes>
             <Route index element={<SupportContent />}/>
             <Route path="integrator" element={<IntegratorContent />}/>

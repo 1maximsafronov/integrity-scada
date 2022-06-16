@@ -3,20 +3,20 @@ import Markdown from 'markdown-to-jsx';
 import {useEffect} from "react";
 import {useParams} from "react-router-dom";
 
-const IntegrityServer = () => {
+const TextContent = () => {
   const [loading, setLoading] = useState(true);
   const [md, setMd] = useState(``);
-  const {id} = useParams();
-  console.log(id);
+
+  const {componentName} = useParams();
 
   useEffect(() =>{
-    fetch(`/markdown/components/${id}.md`)
-    .then((res) =>res.text())
-    .then((text) => {
-      setMd(text);
-      setLoading(false);
-    })
-    .catch((err) => console.log(err));
+    fetch(`/markdown/components/${componentName}.md`)
+      .then((res) =>res.text())
+      .then((text) => {
+        setMd(text);
+        setLoading(false);
+      })
+      .catch((err) => console.log(err));
   });
 
   return (
@@ -30,4 +30,4 @@ const IntegrityServer = () => {
   );
 };
 
-export default IntegrityServer;
+export default TextContent;

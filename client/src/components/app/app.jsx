@@ -1,8 +1,4 @@
-import {
-  // BrowserRouter,
-  Routes,
-  Route,
-} from "react-router-dom";
+import {Routes, Route} from "react-router-dom";
 import React from "react";
 import MainPage from "components/pages/main-page";
 import LoginPage from "components/pages/login-page";
@@ -23,6 +19,7 @@ const App = () => {
       <Route path='support/*' element={<SupportPage />}/>
       <Route path='user/*' element={<UserPage />}/>
       <Route path='admin/*' element={<AdminPage />}/>
+
       <Route path='*' element={<NotFoundPage />}/>
     </Routes>
   );

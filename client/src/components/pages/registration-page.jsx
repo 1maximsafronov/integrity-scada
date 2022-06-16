@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import PageHeader from "components/page-header/page-header";
 import PageFooter from "components/page-footer/page-footer";
 import {useDispatch} from "react-redux";
+import {regitrationAction} from "store/api-actions";
 import {redirectToRoute} from "store/actions";
 
 const RegistrationPage = () => {
@@ -14,15 +15,23 @@ const RegistrationPage = () => {
 
   const dispatch = useDispatch();
 
-  // const handleFormSubmit = (evt) => {
-  //   evt.preventDefault();
-  //   dispatch(redirectToRoute(`/`));
-  // };
-
-  const onButClick = (evt) => {
+  const handleFormSubmit = (evt) => {
     evt.preventDefault();
-    dispatch(redirectToRoute(`/`));
+
+    if (password === repeatPassword) {
+      const newUserData = {
+        email,
+        userName,
+        password,
+        company,
+        phone
+      };
+
+      dispatch(regitrationAction(newUserData))
+        .then(() => dispatch(redirectToRoute(`/user`)));
+    }
   };
+
 
   return (
     <div className="page  page--login">
@@ -30,7 +39,7 @@ const RegistrationPage = () => {
 
       <main className="page-content page-content--login-page">
         <div className="page-content__wrapper">
-          <form className="page-content__registration-form registration-form" id="registration-form" action="/api/registration">
+          <form className="page-content__registration-form registration-form" onSubmit={handleFormSubmit} id="registration-form" method="POST" action="/api/registration">
             <h1 className="registration-form__title">Регистрация</h1>
             <div className="registration-form__wrapper">
               <p className="registration-form__text-box">
@@ -131,8 +140,8 @@ const RegistrationPage = () => {
                 ПЕРСОНАЛЬНЫХ ДАННЫХ
                 </span>.
               </p>
-              <button onClick={onButClick} className="btn registration-form__submit-btn" type="submit">
-              Зарегистрироваться
+              <button className="btn registration-form__submit-btn" type="submit">
+                Зарегистрироваться
               </button>
             </div>
 

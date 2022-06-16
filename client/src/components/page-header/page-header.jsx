@@ -8,7 +8,9 @@ import {logoutAction} from "store/api-actions";
 
 const PageHeader = (props) => {
   const isUserAuth = useSelector(isUserAuthorized);
+
   const [closedNav, setClosedNav] = useState(true);
+
   const {activMenuItem = ``} = props;
   const dispatch = useDispatch();
 

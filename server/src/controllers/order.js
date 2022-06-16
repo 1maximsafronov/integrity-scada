@@ -1,4 +1,5 @@
-const { OrderUser,OrderGuest  } = require("../models/models");
+const jwt = require("jsonwebtoken");
+const { OrderUser, OrderGuest  } = require("../models/models");
 
 class OrderController {
   async create(req, res, next) {
@@ -33,23 +34,46 @@ class OrderController {
     }
   }
 
-  async update() {
-
-  }
-
-  async delete(req, res, next) {
-
-  }
-
   async getOne(req, res, next) {
 
   }
 
+  async getUserOrders(req, res, next) {
+    let userData = {};
+    const token = req.headers["authorization"];
+
+    if (token == null) {
+      return res.sendStatus(401);
+    }
+    jwt.verify(token, SECRET_KEY, (err, user) => {
+      if (err) return res.sendStatus(403);
+      userData = user;
+    });
+
+    try {
+      const userOrders = await OrderUser.findAll({
+        where: {
+          email: userData.email
+        }
+      });
+
+      res.json({
+        data: userOrders,
+      });
+    } catch (error) {
+      res.status(500).json({error: "Ошибка при запросе списка заявок"})
+    }
+  }
+
   async getAll(req, res, next) {
     try {
-      const orders = await (await OrderGuest.findAll());
+      const guestOrders = await OrderGuest.findAll();
+      const userOrders = await OrderUser.findAll();
       res.json({
-        data: orders,
+        data: {
+          guestOrders,
+          userOrders
+        },
       });
     } catch (error) {
       res.status(500).json({error: "Ошибка при запросе списка заявок"})

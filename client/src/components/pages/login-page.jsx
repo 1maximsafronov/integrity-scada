@@ -9,8 +9,9 @@ import {redirectToRoute} from "store/actions";
 const LoginPage = () => {
   const isAuth = useSelector(isUserAuthorized);
   const dispatch = useDispatch();
-  const [password, setPassword] = useState(``);
+
   const [email, setEmail] = useState(``);
+  const [password, setPassword] = useState(``);
 
   if (isAuth) {
     dispatch(redirectToRoute(`/user`));
@@ -18,6 +19,7 @@ const LoginPage = () => {
 
   const handleFormSubmit = (evt) => {
     evt.preventDefault();
+
     dispatch(loginAction({email, password}));
   };
 
@@ -29,6 +31,7 @@ const LoginPage = () => {
         <div className="page-content__wrapper">
           <form className="page-content__login-form login-form" id="login-form" action="/api/login" onSubmit={handleFormSubmit}>
             <h1 className="login-form__title">Авторизация</h1>
+
             <p className="login-form__text-box">
               <label className="visually-hidden" htmlFor="login-form-email">Введите email</label>
               <input className="custom-text-input"
@@ -40,6 +43,7 @@ const LoginPage = () => {
                 value={email}
                 onChange={({target}) => setEmail(target.value)}/>
             </p>
+
             <p className="login-form__text-box">
               <label className="visually-hidden" htmlFor="login-form-password">Введите email</label>
               <input className="custom-text-input"
@@ -51,6 +55,7 @@ const LoginPage = () => {
                 value={password}
                 onChange={({target}) => setPassword(target.value)}/>
             </p>
+
             <div className="login-form__bot-wrapper">
               <p className="login-form__remember">
                 <input className="visually-hidden" type="checkbox" name="login-form-rememer" id="login-form-rememer" />

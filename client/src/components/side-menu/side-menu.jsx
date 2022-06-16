@@ -10,9 +10,14 @@ const SideMenu = (props) => {
   return (
     <div className="page-content__side-menu side-menu">
       <ul className="side-menu__list">
+
         {items.map((item, index) => (
-          <SideMenuItem key={`side-item-${item.name}-${index}`} value={item} isActive={location.pathname === item.path}/>
+          <SideMenuItem key={`side-item-${item.name}-${index}`}
+            value={item}
+            isActive={location.pathname === item.path}
+          />
         ))}
+
       </ul>
     </div>
   );
