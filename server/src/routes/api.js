@@ -5,13 +5,13 @@ const userController = require("../controllers/user.js");
 const orderController = require("../controllers/order.js");
 const {authenticateToken, adminAuth} = require("../utils/token");
 
-apiRouter.get("/login", userController.checkAuth);
 apiRouter.post("/login", userController.login);
+apiRouter.get("/login", userController.checkAuth);
 apiRouter.post("/registration", userController.registration);
+apiRouter.delete("/logout", userController.logout);
 
 apiRouter.get("/users", adminAuth, userController.getUsersData);
 apiRouter.get("/user/:id", userController.getOneUserData);
-apiRouter.delete("/logout", userController.logout);
 
 apiRouter.get("/documents", documentController.getAll);
 apiRouter.get("/documents/:id", documentController.getOne);

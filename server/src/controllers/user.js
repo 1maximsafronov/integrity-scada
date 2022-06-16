@@ -1,5 +1,6 @@
 const jwt = require("jsonwebtoken");
 const { User: UserModel } = require("../models/models");
+
 const md5 = require("md5");
 const {generateToken, verifyToken} = require("../utils/token.js");
 const {getCleanUserDate} = require("../utils/common.js")
@@ -39,11 +40,11 @@ class UserController {
     }
 
     if (errors.length) {
-      res.status(400).json({ error: errors.join(",") });
-      return;
+      return res.status(400).json({ error: errors.join(",") });
     }
 
     const user = await UserModel.findOne({ where: { email } });
+
     if (!user) {
       return res.status(400).json({
         error: "Пользователь не найден",
@@ -51,6 +52,7 @@ class UserController {
     }
 
     let comparePassword = md5(password) === user.password;
+
     if (!comparePassword) {
       return res.status(400).json({
         error: "Не верный пароль",
@@ -108,14 +110,7 @@ class UserController {
     });
   }
 
-  async updateData(req, res) {}
-
   async getUsersData(req, res) {
-    const {user} = req;
-    if (user.role !== "admin") {
-      return res.status(403).json({error: "У вас нет прав доступа"});
-    }
-
     try {
       const users = await (await UserModel.findAll()).map(getCleanUserDate);
       res.json({
@@ -127,11 +122,15 @@ class UserController {
   }
 
   async getOneUserData(req, res) {
+    const userId =  req.params.id;
+
     try {
-      const {dataValues} = await UserModel.findOne({where: {id: req.params.id}});
+      const {dataValues} = await UserModel.findOne({where: {id: userId}});
+
       res.json({
         data: {...getCleanUserDate(dataValues)}
       });
+
     } catch {
       res.status(400).json({error: "Пользователь не найден"});
     }

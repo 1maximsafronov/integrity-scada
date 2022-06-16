@@ -21,7 +21,7 @@ const RegistrationPage = () => {
     if (password === repeatPassword) {
       const newUserData = {
         email,
-        userName,
+        name: userName,
         password,
         company,
         phone
