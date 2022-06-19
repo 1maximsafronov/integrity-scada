@@ -5,11 +5,11 @@ import {Provider} from "react-redux";
 
 import App from "./components/app/app.jsx";
 import {store} from "./store/index";
-import {checkAuthAction} from "./store/api-actions";
+import {checkAuthAction, requestUserOrders} from "./store/api-actions";
 import browserHistory from "./browser-history";
 
 store.dispatch(checkAuthAction());
-
+store.dispatch(requestUserOrders());
 ReactDom.render(
     <Provider store={store}>
       <HistoryRouter history={browserHistory}>

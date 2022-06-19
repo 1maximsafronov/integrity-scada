@@ -5,7 +5,7 @@ import {loadUserDocuments, loadUserLicenses, loadUserOrders, requireAuthorizatio
 const initialState = {
   authorizationStatus: AuthorizationStatus.NoAuth,
   userData: null,
-  userOrders: [],
+  userOrders: null,
   availableDocuments: [],
   availableLicenses: []
 };

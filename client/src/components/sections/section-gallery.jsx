@@ -7,27 +7,35 @@ const SectionGallery = () => {
         <h2 className="visually-hidden">Галлерея мнемосхем</h2>
         <ul className="gallery__list">
           <li className="gallery__item">
-            <div className="gallery__picture"></div>
+            <div className="gallery__picture">
+              <img src="img/scheme-4.png" alt="Схема 4" />
+            </div>
             <p className="gallery__desc">
-                Короткое описание, в две строки внесения ясности и деталей
+                Короткое описание схемы
             </p>
           </li>
           <li className="gallery__item">
-            <div className="gallery__picture"></div>
+            <div className="gallery__picture">
+              <img src="img/scheme-2.png" alt="Схема 2" />
+            </div>
             <p className="gallery__desc">
-                Короткое описание, в две строки внесения ясности и деталей
+                Короткое описание схемы
             </p>
           </li>
           <li className="gallery__item">
-            <div className="gallery__picture"></div>
+            <div className="gallery__picture">
+              <img src="img/scheme-3.png" alt="Схема 3" />
+            </div>
             <p className="gallery__desc">
-                Короткое описание, в две строки внесения ясности и деталей
+                Короткое описание схемы
             </p>
           </li>
           <li className="gallery__item">
-            <div className="gallery__picture"></div>
+            <div className="gallery__picture">
+              <img src="img/scheme-4.png" alt="Схема 4" />
+            </div>
             <p className="gallery__desc">
-                Короткое описание, в две строки внесения ясности и деталей
+                Короткое описание схемы
             </p>
           </li>
         </ul>

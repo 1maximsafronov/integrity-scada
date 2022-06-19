@@ -13,10 +13,10 @@ app.use(express.json());
 
 app.use("/api", apiRouter);
 
-app.use(express.static(path.resolve(__dirname, '../../client/public')));
+app.use(express.static(path.resolve(__dirname, '../public')));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../../client/public', 'index.html'));
+  res.sendFile(path.resolve(__dirname, '../public', 'index.html'));
 });
 
 app.use((req, res) => res.sendStatus(404));

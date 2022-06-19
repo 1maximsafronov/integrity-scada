@@ -26,7 +26,7 @@ const UserInfo = () => {
         <div className="user-info__list">
           <div className="user-info__item">
             <p className="user-info__item-title">Имя:</p>
-            <p className="user-info__item-value">{userData.userName}</p>
+            <p className="user-info__item-value">{userData.name}</p>
           </div>
           <div className="user-info__item">
             <p className="user-info__item-title">Компания:</p>

@@ -75,7 +75,7 @@ export const logoutAction = createAsyncThunk(`user/logout`,
     },
 );
 
-export const sendUserRequest = createAsyncThunk(`user/logout`,
+export const sendUserRequest = createAsyncThunk(`user/sendUserRequest`,
     async (requestData) => {
       try {
         const {data} = await api.post(`/api/order`, requestData);
@@ -87,7 +87,7 @@ export const sendUserRequest = createAsyncThunk(`user/logout`,
     },
 );
 
-export const requestUserOrders = createAsyncThunk(`user/logout`,
+export const requestUserOrders = createAsyncThunk(`user/requestOrders`,
     async () => {
       try {
         const {data} = await api.get(`/api/order`);

@@ -7,6 +7,7 @@ import BreadCrumbs from "components/breadcrumbs/breadcrumbs";
 import SideMenu from "components/side-menu/side-menu";
 import UserInfo from "components/user-info/user-info";
 import UserDocuments from "components/user-documents/user-documents";
+import UserOrder from "components/user-orders/user-orders";
 import {sideMenuItems} from "side-menu-data";
 import {useDispatch, useSelector} from "react-redux";
 import {isUserAuthorized} from "store/selectors";
@@ -31,7 +32,7 @@ const UserPage = () => {
           <SideMenu items={sideMenuItems.USER}/>
           <Routes>
             <Route index element={<UserInfo />}/>
-            <Route path="orders" element={<h1>История заявок</h1>}/>
+            <Route path="orders" element={<UserOrder />}/>
             <Route path="documents" element={<UserDocuments />}/>
             <Route path="video" element={<h1>Видеоуроки</h1>}/>
             <Route path="licens" element={<h1>Лицензионные ключи</h1>}/>

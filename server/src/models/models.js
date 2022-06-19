@@ -28,7 +28,7 @@ const OrderUser = db.define("Order_User", {
 
 const OrderGuest = db.define("Order_Guest", {
   id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
-  email: { type: DataTypes.STRING, unique: true, },
+  email: { type: DataTypes.STRING },
   userName: { type: DataTypes.STRING },
   phone: { type: DataTypes.STRING },
   company: { type: DataTypes.STRING },

@@ -1,18 +1,24 @@
 import React from "react";
 
 const UserDocuments = () => {
+
+  const renderEmpty = () => {
+    return (
+      <div className="documents__empty">
+        <p className="documents__empty-message">
+                Нет доступных документов
+        </p>
+        <a href="#" className="documents__order-link">Оставить заявку</a>
+      </div>
+    );
+  };
+
   return (
     <div className="page-content__text-content text-content">
       <div className="text-content__section documents">
         <h1 className="text-content__title">
               Документация
         </h1>
-        <div className="documents__empty">
-          <p className="documents__empty-message">
-                Нет доступных документов
-          </p>
-          <a href="#" className="documents__order-link">Оставить заявку</a>
-        </div>
         <ul className="documents__list">
           <li className="documents__item">
             <a className="documents__link" href="">

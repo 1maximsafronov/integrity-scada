@@ -39,27 +39,16 @@ class OrderController {
   }
 
   async getUserOrders(req, res, next) {
-    let userData = {};
-    const token = req.headers["authorization"];
+    let userData = req.user;
 
-    if (token == null) {
-      return res.sendStatus(401);
-    }
-    jwt.verify(token, SECRET_KEY, (err, user) => {
-      if (err) return res.sendStatus(403);
-      userData = user;
-    });
 
     try {
-      const userOrders = await OrderUser.findAll({
+      const userOrders = await OrderGuest.findAll({
         where: {
           email: userData.email
         }
       });
-
-      res.json({
-        data: userOrders,
-      });
+      res.json(userOrders);
     } catch (error) {
       res.status(500).json({error: "Ошибка при запросе списка заявок"})
     }

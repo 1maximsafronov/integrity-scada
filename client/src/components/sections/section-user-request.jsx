@@ -1,6 +1,9 @@
 import React, {useState} from "react";
+import {useEffect} from "react";
+import {useSelector} from "react-redux";
 import {useDispatch} from "react-redux";
 import {sendUserRequest} from "store/api-actions";
+import {getUserData} from "store/selectors";
 
 const SectionUserRequest = () => {
   const dispatch = useDispatch();
@@ -11,6 +14,23 @@ const SectionUserRequest = () => {
   const [email, setEmail] = useState(``);
   const [message, setMessage] = useState();
   const [sendStatus, setSendStatus] = useState(`waiting`);
+
+  const userData = useSelector(getUserData);
+
+  useEffect(() => {
+    if (userData) {
+      setUsername(userData.name);
+      setCompany(userData.company);
+      setEmail(userData.email);
+      setPhone(userData.phone);
+    }
+  }, [userData]);
+
+
+  const resetForm = () => {
+    setMessage(``);
+    setType(`demo`);
+  };
 
   const onRequestFormSubmit = (evt) => {
     evt.preventDefault();
@@ -32,6 +52,8 @@ const SectionUserRequest = () => {
         setTimeout(() => {
           setSendStatus(`waiting`);
         }, 2000);
+
+        resetForm();
       })
       .catch(() => {
         setSendStatus(`error`);
