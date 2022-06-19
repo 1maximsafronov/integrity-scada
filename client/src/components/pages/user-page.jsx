@@ -5,6 +5,8 @@ import PageHeader from "components/page-header/page-header";
 import PageFooter from "components/page-footer/page-footer";
 import BreadCrumbs from "components/breadcrumbs/breadcrumbs";
 import SideMenu from "components/side-menu/side-menu";
+import UserInfo from "components/user-info/user-info";
+import UserDocuments from "components/user-documents/user-documents";
 import {sideMenuItems} from "side-menu-data";
 import {useDispatch, useSelector} from "react-redux";
 import {isUserAuthorized} from "store/selectors";
@@ -28,9 +30,9 @@ const UserPage = () => {
           <BreadCrumbs />
           <SideMenu items={sideMenuItems.USER}/>
           <Routes>
-            <Route index element={<h1>Личный кабинет пользователя</h1>}/>
+            <Route index element={<UserInfo />}/>
             <Route path="orders" element={<h1>История заявок</h1>}/>
-            <Route path="documents" element={<h1>Документация</h1>}/>
+            <Route path="documents" element={<UserDocuments />}/>
             <Route path="video" element={<h1>Видеоуроки</h1>}/>
             <Route path="licens" element={<h1>Лицензионные ключи</h1>}/>
           </Routes>

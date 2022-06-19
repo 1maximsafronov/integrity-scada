@@ -1,0 +1,67 @@
+.user-orders {
+}
+
+.user-orders__list {
+}
+
+.user-orders__item {
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 15px;
+  padding-top: 20px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  padding-left: 25px;
+
+  color: #373d40;
+  border: 2px solid #eceff4;
+  border-radius: 5px;
+  background: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+
+.user-orders__date {
+  width: 100px;
+  margin: 0;
+  margin-right: 30px;
+}
+
+.user-orders__type {
+  margin: 0;
+  margin-right: 30px;
+}
+
+.user-orders__status {
+  margin: 0;
+  margin-left: auto;
+
+  color: #c7d0e2;
+
+  &--cancel {
+    color: #9b231f;
+  }
+
+  &--success {
+    color: #04d700;
+  }
+}
+
+@include media-mobile {
+  .user-orders__item {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .user-orders__date {
+    width: 80px;
+    margin-right: 15px;
+  }
+
+  .user-orders__type {
+    margin-right: 15px;
+  }
+}

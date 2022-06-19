@@ -7,6 +7,7 @@
 .product-item__link {
   display: flex;
   align-items: center;
+
   margin-bottom: 8px;
 
   &:hover,
@@ -22,40 +23,56 @@
 }
 
 .product-item__icon {
+  display: block;
+  flex-shrink: 0;
+
   width: 100px;
   height: 100px;
-  display: block;
   margin-right: 20px;
+
   fill: #004578;
+
+  use {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 .product-item__title {
-  font-size: 32px;
-  line-height: 39px;
   margin: 0;
 
   color: #373d40;
+
+  font-size: 32px;
+  line-height: 39px;
 }
 
 .product-item__small-title {
   display: block;
-  font-size: 24px;
-  line-height: 29px;
 
   color: #004578;
+
+  font-size: 24px;
+  line-height: 29px;
 }
 
 .product-item__desc {
+  margin: 0;
+
   font-size: 20px;
   line-height: 24px;
-  margin: 0;
 }
 
 @include media-mobile {
   .product-item__icon {
-    margin-right: 10px;
     width: 60px;
     height: 60px;
+    margin-right: 10px;
+
+    use {
+      width: 60px;
+      height: 60px;
+    }
   }
 
   .product-item__title {

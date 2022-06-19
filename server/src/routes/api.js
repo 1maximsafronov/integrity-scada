@@ -20,7 +20,7 @@ apiRouter.put("/documents/:id", documentController.update);
 
 apiRouter.get("/orders", orderController.getAll);
 apiRouter.post("/order", orderController.create);
-apiRouter.get("/order", orderController.getUserOrders)
+apiRouter.get("/order", authenticateToken, orderController.getUserOrders)
 
 apiRouter.use((req, res) => res.sendStatus(404))
 

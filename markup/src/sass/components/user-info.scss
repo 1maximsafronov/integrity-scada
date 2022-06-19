@@ -1,0 +1,33 @@
+.user-info {
+}
+
+.user-info__list {
+  padding-top: 30px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.user-info__item {
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid #eceff4;
+}
+
+.user-info__item-title {
+  margin: 0;
+  margin-bottom: 15px;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.user-info__item-value {
+  color: #373d40;
+
+  font-style: italic;
+}

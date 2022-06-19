@@ -1,7 +1,7 @@
 import {createAsyncThunk} from '@reduxjs/toolkit';
 import {store, api} from 'store';
 import {saveToken, dropToken} from 'services/token';
-import {requireAuthorization, setUserData, redirectToRoute} from './actions';
+import {requireAuthorization, setUserData, redirectToRoute, setUserOrders} from './actions';
 import {AuthorizationStatus} from 'const';
 
 
@@ -81,6 +81,17 @@ export const sendUserRequest = createAsyncThunk(`user/logout`,
         const {data} = await api.post(`/api/order`, requestData);
         console.log(data);
         console.log(`Запрос успешно отправлен`);
+      } catch (error) {
+        console.log(`Ошибка отправки запроса`);
+      }
+    },
+);
+
+export const requestUserOrders = createAsyncThunk(`user/logout`,
+    async () => {
+      try {
+        const {data} = await api.get(`/api/order`);
+        store.dispatch(setUserOrders(data));
       } catch (error) {
         console.log(`Ошибка отправки запроса`);
       }

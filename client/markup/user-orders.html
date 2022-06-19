@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="page  page--inner">
+    <header class="page-header page-header--closed-nav">
+      <div class="page-header__wrapper">
+        <div class="page-header__main-nav">
+          <a href="index.html" class="page-header__logo">
+            <img src="img/logo-elesy.svg" width="67" height="40" alt="">
+          </a>
+          <div class="page-header__nav-list">
+            <a href="products.html" class="page-header__nav-item page-header__nav-item--current">Продукты</a>
+            <a href="support.html" class="page-header__nav-item">Поддержка</a>
+            <a href="" class="page-header__nav-item">Контакты</a>
+          </div>
+          <a href="tel:+73822601012" class="page-header__phone">
+            <svg class="page-header__phone-icon" width="20" height="20" fill="#004578">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
+            +7 (3822) 601-012</a>
+        </div>
+
+        <div class="page-header__user-nav">
+          <button class="page-header__nav-toggler"></button>
+          <div class="page-header__user-nav-list">
+            <a href="login.html" class="page-header__user-nav-item">Вход</a>
+            <a href="registration.html" class="page-header__user-nav-item">Регистрация</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="page-content page-content--innerpage">
+      <div class="page-content__wrapper">
+        <ul class="page-content__breadcrumbs breadcrumbs">
+          <li class="breadcrumbs__item">
+            <a href="index.html" class="breadcrumbs__link">Главная</a>
+          </li>
+          <li class="breadcrumbs__item">
+            <a class="breadcrumbs__link">Политика лицензирования</a>
+          </li>
+        </ul>
+        <div class="page-content__side-menu side-menu">
+          <ul class="side-menu__list">
+            <li class="side-menu__item">
+              <a href="user-info.html" class="side-menu__link">
+                Личный данные
+              </a>
+            </li>
+            <li class="side-menu__item side-menu__item--active">
+              <a href="user-orders.html" class="side-menu__link">
+                Истоиря заявок
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="user-documents.html" class="side-menu__link">
+                Документация
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="user-lessons.html" class="side-menu__link">
+                Видео уроки
+              </a>
+            </li>
+            <li class="side-menu__item">
+              <a href="user-licenses.html" class="side-menu__link">
+                Лицензионные ключи
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-content__text-content text-content">
+          <div class="text-content__section user-orders">
+            <h1 class="text-content__title">
+              Документация
+            </h1>
+            <div class="user-orders__list">
+              <div class="user-orders__item">
+                <p class="user-orders__date">25.05.2022</p>
+                <p class="user-orders__type">Пробная версия</p>
+                <p class="user-orders__status">Обработка</p>
+              </div>
+
+              <div class="user-orders__item">
+                <p class="user-orders__date">20.04.2022</p>
+                <p class="user-orders__type">Документация</p>
+                <p class="user-orders__status user-orders__status--cancel">Отклонена</p>
+              </div>
+
+              <div class="user-orders__item">
+                <p class="user-orders__date">10.03.2022</p>
+                <p class="user-orders__type">Пробная версия</p>
+                <p class="user-orders__status user-orders__status--success">Одобрена</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__nav">
+          <h2 class="page-footer__title page-footer__nav-title">
+            Поддержка
+          </h2>
+          <ul class="page-footer__nav-list">
+            <li class="page-footer__nav-item">
+              <a href="" class="page-footer__nav-link">
+                Документы
+              </a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="" class="page-footer__nav-link">
+                Видеоуроки
+              </a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="" class="page-footer__nav-link">
+                Тех.поддержка
+              </a>
+            </li>
+            <li class="page-footer__nav-item">
+              <a href="" class="page-footer__nav-link">
+                Заявка на обучение
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__contacts">
+          <h2 class="page-footer__title">
+            Головной оффис
+          </h2>
+          <a href="mailto:" class="page-footer__contacts-item page-footer__contacts-item--mail">
+            elesy@elesy.ru
+          </a>
+          <a href="tel:+" class="page-footer__contacts-item page-footer__contacts-item--tel">
+            +7 (3822) 601-000
+          </a>
+        </div>
+        <div class="page-footer__contacts">
+          <h2 class="page-footer__title">
+            Техническая поддержка
+          </h2>
+          <a href="mailto:" class="page-footer__contacts-item page-footer__contacts-item--mail">
+            support@elesy.ru
+          </a>
+          <a href="tel:+" class="page-footer__contacts-item page-footer__contacts-item--tel">
+            +7 (3822) 60-10-60
+          </a>
+          <a href="tel:+" class="page-footer__contacts-item page-footer__contacts-item--fax">
+            +7 (3822) 601-001
+          </a>
+        </div>
+        <div class="page-footer__contacts">
+          <h2 class="page-footer__title">
+            Коммерческий отдел
+          </h2>
+          <a href="mailto:" class="page-footer__contacts-item page-footer__contacts-item--mail">
+            scada@elesy.ru
+          </a>
+          <a href="tel:+" class="page-footer__contacts-item page-footer__contacts-item--tel">
+            +7 (3822) 601-012
+          </a>
+          <a href="tel:+" class="page-footer__contacts-item page-footer__contacts-item--fax">
+            +7 (3822) 601-001
+          </a>
+        </div>
+      </div>
+      <p class="page-footer__copyright">
+        (с) 2022 Все права защищены
+      </p>
+    </footer>
+  </div>
+</body>
+
+</html>

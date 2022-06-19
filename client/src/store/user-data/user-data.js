@@ -1,6 +1,6 @@
 import {createReducer} from '@reduxjs/toolkit';
 import {AuthorizationStatus} from 'const';
-import {loadUserDocuments, loadUserLicenses, loadUserOrders, requireAuthorization, setUserData} from 'store/actions';
+import {loadUserDocuments, loadUserLicenses, loadUserOrders, requireAuthorization, setUserData, setUserOrders} from 'store/actions';
 
 const initialState = {
   authorizationStatus: AuthorizationStatus.NoAuth,
@@ -26,6 +26,9 @@ const userData = createReducer(initialState, (builder) => {
     })
     .addCase(setUserData, (state, action) => {
       state.userData = action.payload;
+    })
+    .addCase(setUserOrders, (state, action) => {
+      state.userOrders = action.payload;
     });
 });
 
