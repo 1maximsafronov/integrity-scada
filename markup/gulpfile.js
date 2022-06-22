@@ -65,13 +65,6 @@ const styles = () => {
 const html = () => {
   return gulp
     .src("src/**/*.html")
-    // ! Временно отключил минификацию HTML
-    // .pipe(
-    //   htmlmin({
-    //     collapseWhitespace: true,
-    //     ignoreCustomFragments: [/<br>\s/gi],
-    //   })
-    // )
     .pipe(gulp.dest("build/"));
 };
 
